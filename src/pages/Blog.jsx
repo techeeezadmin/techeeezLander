@@ -66,14 +66,14 @@ export function Blog() {
 
           {featured ? (
             <FadeInUp className="mt-12">
-              <BlogCard post={featured} featured />
+              <BlogCard post={featured} featured index={0} />
             </FadeInUp>
           ) : null}
 
-          <div className="mt-5 grid gap-5 md:grid-cols-2">
+          <div className="blog-index-grid mt-5">
             {rest.map((post, index) => (
-              <FadeInUp key={post.slug} delay={index * 50}>
-                <BlogCard post={post} />
+              <FadeInUp key={post.slug} delay={index * 50} className="h-full">
+                <BlogCard post={post} index={index + (featured ? 1 : 0)} />
               </FadeInUp>
             ))}
           </div>

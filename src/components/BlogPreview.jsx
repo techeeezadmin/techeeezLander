@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
 import { FadeInUp } from "./FadeInUp";
-import { BlogCard } from "./BlogCard";
-import { blogPosts } from "../data/blog";
+import { blogPosts, getCategoryAccent } from "../data/blog";
+import { getServiceBySlug } from "../data/services";
+import { ServiceScene } from "./ServiceScenes";
 
 export function BlogPreview() {
-  const [featured, ...rest] = blogPosts;
-  const side = rest.slice(0, 2);
+  const posts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="bg-[#1A1A1F] px-6 py-28 md:py-36">
-      <div className="mx-auto max-w-7xl">
+    <section id="blog" className="blog-stack" aria-label="Journal">
+      <div className="blog-stack__intro">
         <FadeInUp>
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 px-6">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
                 Journal
               </p>
-              <h2 className="mt-3 text-[clamp(2.2rem,5vw,4.2rem)] font-medium tracking-tight">
+              <h2 className="mt-3 max-w-3xl text-[clamp(2.2rem,5vw,4.2rem)] font-medium tracking-tight">
                 Ideas for building software that{" "}
                 <span className="font-serif italic">lasts.</span>
               </h2>
@@ -31,20 +31,46 @@ export function BlogPreview() {
             </Link>
           </div>
         </FadeInUp>
-
-        <div className="grid gap-5 lg:grid-cols-[1.35fr_0.9fr]">
-          <FadeInUp>
-            <BlogCard post={featured} featured />
-          </FadeInUp>
-          <div className="grid gap-5">
-            {side.map((post, index) => (
-              <FadeInUp key={post.slug} delay={80 + index * 70}>
-                <BlogCard post={post} />
-              </FadeInUp>
-            ))}
-          </div>
-        </div>
       </div>
+
+      {posts.map((post, index) => {
+        const accent = getCategoryAccent(post.category);
+        const service = getServiceBySlug(post.relatedService);
+        return (
+          <article
+            key={post.slug}
+            className="sticky-stack__panel blog-stack__panel"
+            style={{ zIndex: index + 1 }}
+          >
+            <img
+              className="sticky-stack__video"
+              src={post.image}
+              alt=""
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+            />
+            <div className="sticky-stack__veil" />
+            {service ? (
+              <div className="blog-stack__scene" aria-hidden="true">
+                <ServiceScene slug={service.slug} accent={accent} />
+              </div>
+            ) : null}
+            <div className="sticky-stack__copy blog-stack__copy">
+              <p style={{ color: accent }}>{post.category}</p>
+              <h2>{post.title}</h2>
+              <span>{post.excerpt}</span>
+              <Link
+                to={`/blog/${post.slug}`}
+                data-cursor="link"
+                className="blog-stack__cta"
+              >
+                Read article
+                <span className="btn-arrow">→</span>
+              </Link>
+            </div>
+          </article>
+        );
+      })}
     </section>
   );
 }

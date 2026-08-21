@@ -1,5 +1,7 @@
 import { Hero } from "../components/Hero";
+import { ParallaxGallery } from "../components/ParallaxGallery";
 import { AboutPreview } from "../components/AboutPreview";
+import { StickyChapters } from "../components/StickyChapters";
 import { ServiceShowcase } from "../components/ServiceShowcase";
 import { WorkPreview } from "../components/WorkPreview";
 import { Testimonial } from "../components/Testimonial";
@@ -18,7 +20,9 @@ export function Home() {
       />
       <main>
         <Hero />
+        <ParallaxGallery />
         <AboutPreview />
+        <StickyChapters />
         <ServiceShowcase />
         <WorkPreview />
         <Testimonial />

@@ -81,7 +81,7 @@ export function BlogPost() {
           </FadeInUp>
 
           <FadeInUp className="mt-10 overflow-hidden rounded-[28px] border border-white/12">
-            <BlogCover post={post} className="is-hero" />
+            <BlogCover post={post} className="is-hero" showScene />
           </FadeInUp>
 
           <div
@@ -133,9 +133,9 @@ export function BlogPost() {
 
           <aside className="mt-20">
             <h2 className="text-2xl font-medium">Related articles</h2>
-            <div className="mt-6 grid gap-5 md:grid-cols-2">
-              {related.map((item) => (
-                <BlogCard key={item.slug} post={item} />
+            <div className="blog-index-grid mt-6">
+              {related.map((item, index) => (
+                <BlogCard key={item.slug} post={item} index={index} />
               ))}
             </div>
             <Link to="/blog" className="mt-8 inline-flex text-sm text-[#D4D4D8] hover:text-white">

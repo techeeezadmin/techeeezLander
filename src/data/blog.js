@@ -1,4 +1,5 @@
-const author = "Tech Eeez Editorial Team";
+const cover = (id) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1600&q=80`;
 
 export const blogPosts = [
   {
@@ -12,6 +13,8 @@ export const blogPosts = [
     seoDescription:
       "Learn how modern web development decisions improve speed, reliability, and long-term business scalability.",
     relatedService: "web-development",
+    image: cover("photo-1498050108023-c3279e81b4d4"),
+    imageAlt: "Developer working on a modern web application",
     content: [
       "Modern web development is not only about visual polish. It is about creating systems that remain fast, maintainable, and adaptable as business needs evolve.",
       "Scalable architecture reduces technical rework. Teams can add new pages, campaigns, and workflows without rebuilding core foundations every quarter.",
@@ -30,6 +33,8 @@ export const blogPosts = [
     seoDescription:
       "Compare custom web development and website builders with a practical decision framework for growing businesses.",
     relatedService: "web-development",
+    image: cover("photo-1461749280684-dccba630e2f6"),
+    imageAlt: "Code editor showing a web development project",
     content: [
       "Website builders are useful when speed and low setup effort are top priorities. They can work well for very small or early-stage content needs.",
       "Custom development becomes more valuable when businesses need deeper integrations, stronger performance control, and long-term flexibility.",
@@ -48,6 +53,8 @@ export const blogPosts = [
     seoDescription:
       "Understand why modern businesses are adopting cloud solutions to improve scalability, resilience, and operational agility.",
     relatedService: "cloud-solutions",
+    image: cover("photo-1451187580459-43490279c0fa"),
+    imageAlt: "Earth seen from orbit representing cloud infrastructure",
     content: [
       "Cloud solutions help teams avoid infrastructure bottlenecks by making scaling more predictable and operationally simpler.",
       "Businesses also benefit from improved reliability models and more resilient deployment workflows.",
@@ -66,6 +73,8 @@ export const blogPosts = [
     seoDescription:
       "Compare AWS and Azure across scalability, services, pricing, DevOps, security and business requirements to choose the right cloud platform.",
     relatedService: "cloud-solutions",
+    image: cover("photo-1544197150-b99a580bb7a2"),
+    imageAlt: "Server racks in a cloud data center",
     content: [
       "Both AWS and Azure provide broad cloud capabilities. The better fit depends on existing tooling, team familiarity, and integration requirements.",
       "A useful evaluation model includes governance requirements, deployment workflows, and future growth patterns.",
@@ -84,6 +93,8 @@ export const blogPosts = [
     seoDescription:
       "Explore practical ways data analytics helps teams make faster, clearer, and more confident decisions.",
     relatedService: "data-analytics",
+    image: cover("photo-1551288049-bebda4e38f71"),
+    imageAlt: "Analytics dashboard with charts and business metrics",
     content: [
       "Analytics becomes valuable when metrics are tied directly to business decisions, not only dashboards.",
       "Visualization helps teams understand performance patterns quickly and spot issues before they become costly.",
@@ -102,6 +113,8 @@ export const blogPosts = [
     seoDescription:
       "Learn why cybersecurity should be integrated into digital strategy through audits, protection, and compliance readiness.",
     relatedService: "cybersecurity",
+    image: cover("photo-1550751827-4bd374c3f58b"),
+    imageAlt: "Cybersecurity hardware and circuit board close-up",
     content: [
       "Security is strongest when planned early. Late-stage security fixes are typically more expensive and more disruptive.",
       "Strategic security planning helps reduce avoidable risk across applications, workflows, and operations.",
@@ -120,6 +133,8 @@ export const blogPosts = [
     seoDescription:
       "Understand how API integration and workflow automation help modern businesses reduce friction and scale operations.",
     relatedService: "system-integration",
+    image: cover("photo-1558494949-ef010cbdcc31"),
+    imageAlt: "Network cables connecting business systems",
     content: [
       "Disconnected systems create duplicated effort and inconsistent data. API integration addresses this by creating reliable data flow between tools.",
       "Integration can reduce manual task repetition and improve process clarity across teams.",
@@ -138,6 +153,8 @@ export const blogPosts = [
     seoDescription:
       "Compare native and cross-platform development trade-offs for product quality, speed, and long-term maintenance.",
     relatedService: "mobile-development",
+    image: cover("photo-1512941937669-90a1b58e7e9c"),
+    imageAlt: "Person using a mobile app on a smartphone",
     content: [
       "Native development may provide deeper platform optimization, while cross-platform approaches can improve delivery speed for multi-platform products.",
       "The right decision depends on product complexity, interaction quality targets, and release timelines.",

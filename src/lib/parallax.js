@@ -70,3 +70,45 @@ export function useScrollParallax() {
 
   return ref;
 }
+
+export function usePinnedProgress(onFrame) {
+  const ref = useRef(null);
+  const onFrameRef = useRef(onFrame);
+  onFrameRef.current = onFrame;
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return undefined;
+    if (prefersReducedMotion()) {
+      node.style.setProperty("--pin", "0");
+      onFrameRef.current?.(0);
+      return undefined;
+    }
+
+    let frame = 0;
+
+    const update = () => {
+      const total = Math.max(node.offsetHeight - window.innerHeight, 1);
+      const scrolled = Math.min(Math.max(-node.getBoundingClientRect().top, 0), total);
+      const value = scrolled / total;
+      node.style.setProperty("--pin", value.toFixed(4));
+      onFrameRef.current?.(value);
+    };
+
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  return ref;
+}
