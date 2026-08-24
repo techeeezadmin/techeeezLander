@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { FadeInUp } from "./FadeInUp";
+import { CoverArt } from "./BlogCover";
 import { blogPosts, getCategoryAccent } from "../data/blog";
-import { getServiceBySlug } from "../data/services";
-import { ServiceScene } from "./ServiceScenes";
 
 export function BlogPreview() {
   const posts = blogPosts.slice(0, 3);
@@ -16,7 +15,7 @@ export function BlogPreview() {
               <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
                 Journal
               </p>
-              <h2 className="mt-3 max-w-3xl text-[clamp(2.2rem,5vw,4.2rem)] font-medium tracking-tight">
+              <h2 className="mt-3 max-w-2xl text-[clamp(1.8rem,3.6vw,2.8rem)] font-medium tracking-tight">
                 Ideas for building software that{" "}
                 <span className="font-serif italic">lasts.</span>
               </h2>
@@ -35,28 +34,23 @@ export function BlogPreview() {
 
       {posts.map((post, index) => {
         const accent = getCategoryAccent(post.category);
-        const service = getServiceBySlug(post.relatedService);
         return (
           <article
             key={post.slug}
             className="sticky-stack__panel blog-stack__panel"
-            style={{ zIndex: index + 1 }}
+            style={{ zIndex: index + 1, "--accent": accent }}
           >
-            <img
-              className="sticky-stack__video"
-              src={post.image}
-              alt=""
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
+            <div
+              className="blog-stack__media"
+              style={{ backgroundImage: `url("${post.image}")` }}
+              aria-hidden="true"
             />
             <div className="sticky-stack__veil" />
-            {service ? (
-              <div className="blog-stack__scene" aria-hidden="true">
-                <ServiceScene slug={service.slug} accent={accent} />
-              </div>
-            ) : null}
+            <div className="blog-stack__art" aria-hidden="true">
+              <CoverArt layout={post.layout} overlay={post.overlay} />
+            </div>
             <div className="sticky-stack__copy blog-stack__copy">
-              <p style={{ color: accent }}>{post.category}</p>
+              <p style={{ color: accent }}>{post.kicker}</p>
               <h2>{post.title}</h2>
               <span>{post.excerpt}</span>
               <Link

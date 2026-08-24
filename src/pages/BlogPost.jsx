@@ -4,13 +4,14 @@ import { FadeInUp } from "../components/FadeInUp";
 import { BlogCard } from "../components/BlogCard";
 import { BlogCover } from "../components/BlogCover";
 import { PrimaryButton } from "../components/Buttons";
-import { Seo } from "../components/Seo";
+import { Seo, breadcrumbJsonLd } from "../components/Seo";
 import {
   estimateReadingTime,
   formatPostDate,
   getCategoryAccent,
   getPostBySlug,
   getRelatedPosts,
+  postPlainText,
 } from "../data/blog";
 import { getServiceBySlug } from "../data/services";
 import { siteConfig } from "../data/site";
@@ -48,65 +49,56 @@ export function BlogPost() {
         title={post.seoTitle}
         description={post.seoDescription}
         path={`/blog/${post.slug}`}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: post.title,
-          description: post.seoDescription,
-          datePublished: post.publishedAt,
-          author: { "@type": "Organization", name: "Tech Eeez" },
-          publisher: { "@type": "Organization", name: "Tech Eeez", url: siteConfig.url },
-        }}
+        image={post.image}
+        jsonLd={articleJsonLd(post, minutes)}
       />
       <div className="reading-progress" aria-hidden="true">
         <span style={{ transform: `scaleX(${progress})`, background: accent }} />
       </div>
-      <main className="px-6 pb-28 pt-32">
-        <article className="mx-auto max-w-5xl">
+      <main className="blog-article">
+        <article className="mx-auto max-w-5xl px-6 pb-28 pt-32">
           <FadeInUp>
-            <p className="text-sm text-[#A1A1AA]">
+            <nav className="text-sm text-[#A1A1AA]" aria-label="Breadcrumb">
               <Link to="/blog" className="hover:text-white">
                 Blog
               </Link>
               <span className="mx-2">/</span>
-              {post.category}
+              <Link to={`/blog?topic=${post.topic}`} className="hover:text-white">
+                {post.category}
+              </Link>
+            </nav>
+            <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ color: accent }}>
+              {post.kicker}
             </p>
-            <h1 className="mt-4 max-w-4xl text-[clamp(2.2rem,5.4vw,4.4rem)] font-medium leading-[1.05] tracking-tight">
+            <h1 className="mt-3 max-w-4xl text-[clamp(2.2rem,5.4vw,4.4rem)] font-medium leading-[1.05] tracking-tight">
               {post.title}
             </h1>
             <p className="mt-5 max-w-2xl text-[17px] leading-8 text-[#D4D4D8]">{post.excerpt}</p>
             <p className="mt-4 text-sm text-[#A1A1AA]">
-              {formatPostDate(post.publishedAt)} · {minutes} min read
+              <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt)}</time>
+              {" · "}
+              {minutes} min read
             </p>
           </FadeInUp>
 
           <FadeInUp className="mt-10 overflow-hidden rounded-[28px] border border-white/12">
-            <BlogCover post={post} className="is-hero" showScene />
+            <BlogCover post={post} featured className="is-hero" />
           </FadeInUp>
 
           <div
             id="article-body"
             className="article-frame mx-auto mt-12 max-w-[720px] px-5 py-10 md:px-10"
           >
-            <FadeInUp className="space-y-6 text-[17px] leading-8 text-[#E4E4E7]">
-              {post.content.map((paragraph, index) => (
-                <div key={paragraph}>
-                  {index === 1 ? (
+            <FadeInUp className="space-y-8 text-[17px] leading-8 text-[#E4E4E7]">
+              {post.sections.map((section, index) => (
+                <section key={section.body}>
+                  {section.heading ? (
                     <h2 className="mb-4 text-2xl font-medium tracking-tight text-white">
-                      The practical view
+                      {section.heading}
                     </h2>
                   ) : null}
-                  {index === 3 ? (
-                    <h2 className="mb-4 text-2xl font-medium tracking-tight text-white">
-                      How teams should decide
-                    </h2>
-                  ) : null}
-                  {index === 0 ? (
-                    <p className="article-lead">{paragraph}</p>
-                  ) : (
-                    <p>{paragraph}</p>
-                  )}
-                </div>
+                  <p className={index === 0 ? "article-lead" : undefined}>{section.body}</p>
+                </section>
               ))}
             </FadeInUp>
           </div>
@@ -133,9 +125,9 @@ export function BlogPost() {
 
           <aside className="mt-20">
             <h2 className="text-2xl font-medium">Related articles</h2>
-            <div className="blog-index-grid mt-6">
-              {related.map((item, index) => (
-                <BlogCard key={item.slug} post={item} index={index} />
+            <div className="blog-mosaic is-related mt-6">
+              {related.map((item) => (
+                <BlogCard key={item.slug} post={item} />
               ))}
             </div>
             <Link to="/blog" className="mt-8 inline-flex text-sm text-[#D4D4D8] hover:text-white">
@@ -146,4 +138,35 @@ export function BlogPost() {
       </main>
     </>
   );
+}
+
+function articleJsonLd(post, minutes) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: post.title, path: `/blog/${post.slug}` },
+      ]),
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.seoDescription,
+        image: post.image,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        wordCount: postPlainText(post).split(/\s+/).length,
+        timeRequired: `PT${minutes}M`,
+        articleSection: post.category,
+        mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
+        author: { "@type": "Organization", name: siteConfig.name },
+        publisher: {
+          "@type": "Organization",
+          name: siteConfig.name,
+          url: siteConfig.url,
+        },
+      },
+    ],
+  };
 }

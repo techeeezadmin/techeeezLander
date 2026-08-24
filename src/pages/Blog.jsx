@@ -1,84 +1,118 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 import { FadeInUp } from "../components/FadeInUp";
 import { BlogCard } from "../components/BlogCard";
+import { BlogHero, BlogPageIntro } from "../components/BlogHero";
 import { Seo, breadcrumbJsonLd } from "../components/Seo";
-import { blogCategories, blogPosts } from "../data/blog";
+import {
+  blogPosts,
+  blogTopics,
+  filterPostsByTopic,
+} from "../data/blog";
+import { siteConfig } from "../data/site";
 
 export function Blog() {
-  const [active, setActive] = useState("All");
-  const posts = useMemo(
-    () =>
-      active === "All"
-        ? blogPosts
-        : blogPosts.filter((post) => post.category === active),
-    [active],
-  );
+  const [params, setParams] = useSearchParams();
+  const topic = blogTopics.some((item) => item.id === params.get("topic"))
+    ? params.get("topic")
+    : "all";
+  const posts = useMemo(() => filterPostsByTopic(topic), [topic]);
   const [featured, ...rest] = posts;
+  const activeLabel = blogTopics.find((item) => item.id === topic)?.label ?? "All";
 
   return (
     <>
       <Seo
-        title="Tech Eeez Insights | Software, AI, Cloud & Technology"
-        description="Practical writing from Tech Eeez on web development, cloud, analytics, security, mobile, and integration."
-        path="/blog"
-        jsonLd={breadcrumbJsonLd([
-          { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
-        ])}
+        title="Tech Eeez Blog | Web, Cloud, AI & Software Insights from Mumbai"
+        description="Read practical articles from Tech Eeez on web development, cloud, data analytics, cybersecurity, mobile apps, and system integration for growing businesses in Mumbai."
+        path={topic === "all" ? "/blog" : `/blog?topic=${topic}`}
+        jsonLd={blogIndexJsonLd()}
       />
-      <main className="px-6 pb-28 pt-36">
-        <div className="mx-auto max-w-7xl">
+      <main className="blog-page">
+        <BlogPageIntro />
+
+        <nav className="blog-filters" aria-label="Filter articles by topic">
+          {blogTopics.map((item) => {
+            const on = item.id === topic;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                aria-pressed={on}
+                onClick={() => setParams(item.id === "all" ? {} : { topic: item.id })}
+                className={`blog-filter ${on ? "is-on" : ""}`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </nav>
+
+        <p className="blog-count" aria-live="polite">
+          {posts.length} {posts.length === 1 ? "article" : "articles"}
+          {topic === "all" ? "" : ` in ${activeLabel}`}
+        </p>
+
+        {featured ? (
           <FadeInUp>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
-              Blog
-            </p>
-            <h1 className="mt-4 max-w-4xl text-[clamp(2.6rem,6vw,5.2rem)] font-medium leading-[1.02] tracking-tight">
-              Ideas for building software that{" "}
-              <span className="font-serif italic font-normal">lasts.</span>
-            </h1>
-            <p className="mt-5 max-w-xl text-[#D4D4D8]">
-              Clear writing on the systems and decisions that help teams ship with
-              confidence.
-            </p>
+            <BlogHero post={featured} />
           </FadeInUp>
+        ) : (
+          <p className="blog-empty">No articles in this topic yet.</p>
+        )}
 
-          <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Article categories">
-            {blogCategories.map((category) => {
-              const on = category === active;
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  role="tab"
-                  aria-selected={on}
-                  onClick={() => setActive(category)}
-                  className={`rounded-full border px-4 py-2 text-sm transition ${
-                    on
-                      ? "border-white bg-white text-black"
-                      : "border-white/15 text-[#D4D4D8] hover:border-white/40 hover:text-white"
-                  }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </div>
-
-          {featured ? (
-            <FadeInUp className="mt-12">
-              <BlogCard post={featured} featured index={0} />
-            </FadeInUp>
-          ) : null}
-
-          <div className="blog-index-grid mt-5">
+        {rest.length ? (
+          <div className="blog-mosaic">
             {rest.map((post, index) => (
-              <FadeInUp key={post.slug} delay={index * 50} className="h-full">
-                <BlogCard post={post} index={index + (featured ? 1 : 0)} />
+              <FadeInUp key={post.slug} delay={index * 70} className="h-full">
+                <BlogCard post={post} />
               </FadeInUp>
             ))}
           </div>
-        </div>
+        ) : null}
       </main>
     </>
   );
+}
+
+function blogIndexJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+      ]),
+      {
+        "@type": "Blog",
+        name: "Tech Eeez Insights",
+        description:
+          "Practical writing on web development, cloud, analytics, cybersecurity, mobile, and integration from Tech Eeez in Mumbai.",
+        url: `${siteConfig.url}/blog`,
+        publisher: {
+          "@type": "Organization",
+          name: siteConfig.name,
+          url: siteConfig.url,
+        },
+        blogPost: blogPosts.map((post) => ({
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.seoDescription,
+          datePublished: post.publishedAt,
+          image: post.image,
+          url: `${siteConfig.url}/blog/${post.slug}`,
+        })),
+      },
+      {
+        "@type": "ItemList",
+        name: "Tech Eeez blog articles",
+        itemListElement: blogPosts.map((post, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteConfig.url}/blog/${post.slug}`,
+          name: post.title,
+        })),
+      },
+    ],
+  };
 }

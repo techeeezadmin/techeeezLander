@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { siteConfig } from "../data/site";
 
-export function Seo({ title, description, path = "/", jsonLd }) {
+export function Seo({ title, description, path = "/", jsonLd, image }) {
   const serialized = jsonLd ? JSON.stringify(jsonLd) : "";
 
   useEffect(() => {
@@ -9,7 +9,8 @@ export function Seo({ title, description, path = "/", jsonLd }) {
     document.title = fullTitle;
 
     const canonicalHref = `${siteConfig.url}${path}`;
-    const ogImage = `${siteConfig.url}/og.svg`;
+    const ogImage = image || `${siteConfig.url}/og.svg`;
+    const isArticle = path.startsWith("/blog/") && path !== "/blog";
 
     const upsertMeta = (attribute, key, value) => {
       const selector = `meta[${attribute}="${key}"]`;
@@ -25,9 +26,9 @@ export function Seo({ title, description, path = "/", jsonLd }) {
     upsertMeta("name", "description", description);
     upsertMeta("property", "og:title", fullTitle);
     upsertMeta("property", "og:description", description);
-    upsertMeta("property", "og:url", canonicalHref);
+    upsertMeta("property", "og:url", canonicalHref.split("?")[0]);
     upsertMeta("property", "og:image", ogImage);
-    upsertMeta("property", "og:type", path.startsWith("/blog/") ? "article" : "website");
+    upsertMeta("property", "og:type", isArticle ? "article" : "website");
     upsertMeta("name", "twitter:card", "summary_large_image");
     upsertMeta("name", "twitter:title", fullTitle);
     upsertMeta("name", "twitter:description", description);
@@ -39,7 +40,7 @@ export function Seo({ title, description, path = "/", jsonLd }) {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", canonicalHref);
+    canonical.setAttribute("href", canonicalHref.split("?")[0]);
 
     const existing = document.getElementById("page-jsonld");
     if (existing) existing.remove();
@@ -51,7 +52,7 @@ export function Seo({ title, description, path = "/", jsonLd }) {
       script.text = serialized;
       document.head.appendChild(script);
     }
-  }, [title, description, path, serialized]);
+  }, [title, description, path, serialized, image]);
 
   return null;
 }
