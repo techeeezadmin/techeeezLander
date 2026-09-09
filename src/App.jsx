@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Services } from "./pages/Services";
+import { SeoPage } from "./pages/SeoPage";
 import { ServiceDetail } from "./pages/ServiceDetail";
 import { Work } from "./pages/Work";
 import { Blog } from "./pages/Blog";
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/seo" element={<SeoPage />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<Blog />} />

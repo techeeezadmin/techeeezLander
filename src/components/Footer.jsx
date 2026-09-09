@@ -34,7 +34,7 @@ export function Footer() {
         {services.map((service) => (
           <Link
             key={service.slug}
-            to={`/services/${service.slug}`}
+            to={service.canonicalPath || `/services/${service.slug}`}
             data-cursor="link"
             className="group inline-flex items-center text-lg font-medium text-[#D4D4D8] transition-colors hover:text-white md:text-2xl"
           >

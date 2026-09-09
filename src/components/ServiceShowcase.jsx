@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { LazyServiceParticlesCanvas } from "../three/LazyServiceParticlesCanvas";
-import { services } from "../data/services";
+import { getServicePath, services } from "../data/services";
 
 const COUNT = services.length;
 
@@ -164,7 +164,7 @@ function ServiceCopy({ item, index, compact = false }) {
           {item.pitch}
         </p>
         <Link
-          to={`/services/${item.slug}`}
+          to={getServicePath(item)}
           data-cursor="link"
           className="group mt-8 inline-flex text-sm font-medium text-white"
         >

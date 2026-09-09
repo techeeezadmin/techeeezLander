@@ -3,6 +3,7 @@ import { ParallaxGallery } from "../components/ParallaxGallery";
 import { AboutPreview } from "../components/AboutPreview";
 import { StickyChapters } from "../components/StickyChapters";
 import { ServiceShowcase } from "../components/ServiceShowcase";
+import { SeoPreview } from "../components/SeoPreview";
 import { WorkPreview } from "../components/WorkPreview";
 import { Testimonial } from "../components/Testimonial";
 import { Process } from "../components/Process";
@@ -14,7 +15,7 @@ export function Home() {
     <>
       <Seo
         title="Tech Eeez | AI, Software & Digital Solutions Company in Mumbai"
-        description="Tech Eeez builds AI, web, mobile, cloud, analytics, cybersecurity, and integration solutions that help businesses in Mumbai scale with speed and clarity."
+        description="Tech Eeez builds websites, AI, and software systems — and helps businesses get found on Google and discovered in AI-powered search."
         path="/"
         jsonLd={organizationJsonLd()}
       />
@@ -24,6 +25,7 @@ export function Home() {
         <AboutPreview />
         <StickyChapters />
         <ServiceShowcase />
+        <SeoPreview />
         <WorkPreview />
         <Testimonial />
         <Process />

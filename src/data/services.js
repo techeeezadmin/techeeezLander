@@ -82,6 +82,48 @@ export const services = [
     ],
   },
   {
+    slug: "seo-ai-search",
+    title: "SEO & AI Search",
+    shortLabel: "SEO",
+    shortDescription:
+      "Search visibility for Google and AI-powered discovery, built into the website from the start.",
+    pitch:
+      "We help businesses get found on Google and discovered by AI — technical SEO, content, performance, and search-ready websites without ranking guarantees.",
+    accent: "#67e8f9",
+    particleShape: "browser",
+    seoTitle: "SEO & AI Search Optimization | Tech Eeez",
+    seoDescription:
+      "Tech Eeez helps businesses rank in Google and become easier to discover in AI-powered search — technical SEO, content strategy, and websites built for visibility.",
+    canonicalPath: "/seo",
+    capabilities: [
+      "Technical, on-page, and local SEO",
+      "Content and topical authority strategy",
+      "AI search readiness with structured, intent-led content",
+    ],
+    approach: [
+      "Audit technical health, content, and current visibility",
+      "Build SEO into site structure, performance, and publishing",
+      "Expand into AI-powered discovery without overclaiming citations",
+    ],
+    benefits: [
+      "Stronger organic discoverability",
+      "Clearer search signals for people and machines",
+      "A website designed to be found, not only launched",
+    ],
+    faq: [
+      {
+        question: "Do you guarantee first-page rankings?",
+        answer:
+          "No. We improve the foundations that support visibility. Rankings depend on competition, quality, and how search systems evolve.",
+      },
+      {
+        question: "Is this separate from web development?",
+        answer:
+          "It can start with a new build or an existing site. The difference is that SEO is treated as part of design and engineering, not a layer added at the end.",
+      },
+    ],
+  },
+  {
     slug: "mobile-development",
     title: "Mobile Development",
     shortLabel: "Mobile",
@@ -290,3 +332,6 @@ export const services = [
 
 export const getServiceBySlug = (slug) =>
   services.find((service) => service.slug === slug);
+
+export const getServicePath = (service) =>
+  service.canonicalPath || `/services/${service.slug}`;

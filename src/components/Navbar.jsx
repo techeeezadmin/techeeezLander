@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { siteConfig } from "../data/site";
 
 function isActive(href, pathname, hash) {
+  if (pathname === "/seo" || pathname === "/services/seo-ai-search") return href === "/seo";
   if (pathname === "/about") return href === "/#about";
   if (pathname.startsWith("/services")) return href === "/#services";
   if (pathname === "/work") return href === "/#work";
@@ -60,7 +61,7 @@ export function Navbar() {
         </Link>
 
         <nav
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 xl:gap-6 lg:flex"
           aria-label="Primary"
         >
           {siteConfig.navLinks.map((link) => (

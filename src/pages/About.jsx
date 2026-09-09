@@ -4,14 +4,14 @@ import { CountUp } from "../components/CountUp";
 import { Process } from "../components/Process";
 import { Seo, organizationJsonLd, breadcrumbJsonLd } from "../components/Seo";
 import { siteConfig } from "../data/site";
-import { services } from "../data/services";
+import { getServicePath, services } from "../data/services";
 
 export function About() {
   return (
     <>
       <Seo
         title="About Tech Eeez | Software & Technology Solutions Company"
-        description="Learn how Tech Eeez delivers innovation-focused software solutions for business growth across AI, web, mobile, cloud, data, security, and integration."
+        description="Learn how Tech Eeez delivers software, websites, SEO, and AI search visibility for business growth across web, mobile, cloud, data, security, and integration."
         path="/about"
         jsonLd={[
           organizationJsonLd(),
@@ -62,7 +62,7 @@ export function About() {
               {services.map((service) => (
                 <Link
                   key={service.slug}
-                  to={`/services/${service.slug}`}
+                  to={getServicePath(service)}
                   data-cursor="link"
                   className="group text-lg text-[#D4D4D8] hover:text-white"
                 >

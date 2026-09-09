@@ -111,6 +111,6 @@ export function serviceJsonLd(service) {
       url: siteConfig.url,
     },
     areaServed: "IN",
-    url: `${siteConfig.url}/services/${service.slug}`,
+    url: `${siteConfig.url}${service.canonicalPath || `/services/${service.slug}`}`,
   };
 }

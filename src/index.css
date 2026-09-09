@@ -2260,6 +2260,52 @@ button:hover .btn-arrow {
   }
 }
 
+.seo-journey {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.seo-journey__item {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.1rem;
+  background: rgba(28, 28, 34, 0.75);
+}
+
+.seo-journey__index {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: #a1a1aa;
+}
+
+.seo-journey__item strong {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.seo-journey__item span:last-child {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+.seo-step {
+  transition: transform 0.4s var(--ease-out-expo), border-color 0.3s ease;
+}
+
+.seo-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+@media (min-width: 768px) {
+  .seo-journey {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2270,8 +2316,10 @@ button:hover .btn-arrow {
   .expertise-marquee__track.is-reverse,
   .hero-grid,
   .page-enter,
-  .reveal-line span {
+  .reveal-line span,
+  .seo-step {
     animation: none !important;
+    transform: none !important;
   }
 
   .reveal-line span {

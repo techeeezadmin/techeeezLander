@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { FadeInUp } from "../components/FadeInUp";
 import { SubmitButton } from "../components/Buttons";
 import { Seo, organizationJsonLd, breadcrumbJsonLd } from "../components/Seo";
@@ -9,6 +10,14 @@ const fieldClass =
 
 export function Contact() {
   const [status, setStatus] = useState("idle");
+  const [params] = useSearchParams();
+  const intent = params.get("intent");
+  const defaultMessage =
+    intent === "seo-audit"
+      ? "I would like an SEO audit covering technical health, search visibility, and growth opportunities."
+      : intent === "visibility"
+        ? "I would like to improve our search visibility across Google and AI-powered discovery."
+        : "";
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +41,7 @@ export function Contact() {
     <>
       <Seo
         title="Contact Tech Eeez | Build Your Next Digital Product"
-        description="Talk to Tech Eeez in Mumbai about AI, web, mobile, cloud, analytics, cybersecurity, or integration projects."
+        description="Talk to Tech Eeez in Mumbai about websites, SEO, AI search visibility, or software projects."
         path="/contact"
         jsonLd={[
           organizationJsonLd(),
@@ -84,10 +93,12 @@ export function Contact() {
               <label className="mt-6 block text-sm text-[#D4D4D8]">
                 Message *
                 <textarea
+                  key={intent || "default"}
                   required
                   name="message"
                   rows={5}
                   minLength={10}
+                  defaultValue={defaultMessage}
                   placeholder="Tell us about the work"
                   className={fieldClass}
                 />

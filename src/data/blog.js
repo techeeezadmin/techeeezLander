@@ -290,6 +290,117 @@ export const blogPosts = [
       },
     ],
   },
+  {
+    slug: "seo-starts-when-the-website-is-built",
+    title: "SEO Starts When the Website Is Built",
+    excerpt:
+      "Why technical structure, performance, and content architecture should be designed before launch—not bolted on afterwards.",
+    category: "SEO",
+    topic: "seo",
+    layout: "scale-web",
+    kicker: "Foundations",
+    overlay: "Built-in SEO",
+    publishedAt: "2026-09-01",
+    author: "Tech Eeez",
+    seoTitle: "SEO Starts When the Website Is Built | Tech Eeez",
+    seoDescription:
+      "Learn why SEO belongs in website design and development: crawlability, performance, structure, and content that search engines can understand.",
+    relatedService: "seo-ai-search",
+    image: cover("photo-1432888498266-38ffec3eaf0a"),
+    imageAlt: "Person reviewing website analytics and search data on a laptop",
+    sections: [
+      {
+        heading: null,
+        body: "Search visibility is easier to earn when the website is structured for it from the first templates. Adding SEO after launch often means reworking URLs, headings, speed, and content that were never designed to be found.",
+      },
+      {
+        heading: "Technical choices show up in search",
+        body: "Crawlability, canonical URLs, metadata, and Core Web Vitals are engineering decisions. They determine whether pages can be indexed and how they feel to visitors who arrive from search.",
+      },
+      {
+        heading: "Content needs a place to live",
+        body: "Keyword research only helps if the site has clear pages, internal links, and topics with enough depth. Architecture is the difference between a brochure and a discoverable resource.",
+      },
+      {
+        heading: "What to do on an existing site",
+        body: "If the site is already live, start with an audit: indexing, performance, content gaps, and schema. Then change the foundation before chasing more keywords.",
+      },
+    ],
+  },
+  {
+    slug: "how-ai-search-changes-discovery",
+    title: "How AI Search Changes Discovery (Without the Hype)",
+    excerpt:
+      "People still search, but more journeys start as questions in assistants and answer engines. Here is what businesses can actually prepare for.",
+    category: "AI Search",
+    topic: "ai-search",
+    layout: "data-pulse",
+    kicker: "Discovery",
+    overlay: "Search is changing",
+    publishedAt: "2026-09-04",
+    author: "Tech Eeez",
+    seoTitle: "How AI Search Changes Discovery | Tech Eeez",
+    seoDescription:
+      "A practical look at AI-powered search, answer engines, and how businesses can make websites easier to understand and cite—without claiming guaranteed AI mentions.",
+    relatedService: "seo-ai-search",
+    image: cover("photo-1677442136019-21780ecad995"),
+    imageAlt: "Abstract visualization of connected data and digital networks",
+    sections: [
+      {
+        heading: null,
+        body: "AI search does not replace Google overnight. It does change how some people ask questions and how answers are assembled from sources. Businesses that explain who they are, what they do, and why it is true are easier for both classic search and answer engines to use.",
+      },
+      {
+        heading: "What you cannot control",
+        body: "No agency can promise that an AI system will mention your brand. Those systems choose sources based on their own models, policies, and available web content.",
+      },
+      {
+        heading: "What you can improve",
+        body: "Clear entities, structured data, intent-led pages, and consistent naming help machines map your business to real topics. That is useful in Google results and in AI-assisted discovery.",
+      },
+      {
+        heading: "Keep one strategy",
+        body: "Treat traditional SEO and AI search readiness as the same program: useful pages, technical health, and measurement. Generative engine optimization is an extension of that work, not a separate magic layer.",
+      },
+    ],
+  },
+  {
+    slug: "technical-seo-and-local-search-for-growing-sites",
+    title: "Technical SEO and Local Search for Growing Sites",
+    excerpt:
+      "A practical checklist for indexation, local visibility, and the measurements teams should actually watch.",
+    category: "SEO",
+    topic: "seo",
+    layout: "vs-choice",
+    kicker: "Playbook",
+    overlay: "Technical & local",
+    publishedAt: "2026-09-08",
+    author: "Tech Eeez",
+    seoTitle: "Technical SEO and Local Search | Tech Eeez",
+    seoDescription:
+      "Practical guidance on technical SEO, local search, Search Console, and reporting metrics for businesses that need organic visibility.",
+    relatedService: "seo-ai-search",
+    image: cover("photo-1460925895917-afdab827c52f"),
+    imageAlt: "Dashboard charts showing website traffic and performance metrics",
+    sections: [
+      {
+        heading: null,
+        body: "Growing sites often stall because pages never get indexed, local signals are inconsistent, or reporting tracks vanity rankings instead of qualified demand.",
+      },
+      {
+        heading: "Indexation before ambition",
+        body: "Confirm that important URLs are in the sitemap, allowed in robots.txt, and free of accidental noindex or canonical conflicts. Search Console is the source of truth.",
+      },
+      {
+        heading: "Local search is still a channel",
+        body: "For businesses that serve a city or region, NAP consistency, location pages, and map presence sit alongside classic keyword work.",
+      },
+      {
+        heading: "Report what operations can use",
+        body: "Organic traffic, visibility for relevant queries, indexed pages, leads, and conversion rate beat screenshots of a number-one ranking that may not convert.",
+      },
+    ],
+  },
 ];
 
 export const getPostBySlug = (slug) =>
@@ -317,6 +428,8 @@ export const estimateReadingTime = (post) => {
 
 export const categoryAccents = {
   "Web Development": "#67e8f9",
+  SEO: "#67e8f9",
+  "AI Search": "#c4b5fd",
   "Cloud Solutions": "#7dd3fc",
   "Data Analytics": "#86efac",
   Cybersecurity: "#f9a8d4",
@@ -329,6 +442,8 @@ export const getCategoryAccent = (category) =>
 
 export const blogTopics = [
   { id: "all", label: "All" },
+  { id: "seo", label: "SEO" },
+  { id: "ai-search", label: "AI Search" },
   { id: "web", label: "Web Development" },
   { id: "cloud", label: "Cloud Solutions" },
   { id: "analytics", label: "Data Analytics" },

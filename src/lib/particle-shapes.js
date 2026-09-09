@@ -364,6 +364,7 @@ function makeIntegration() {
 const makers = {
   "ai-solutions": makeAi,
   "web-development": makeWeb,
+  "seo-ai-search": makeWeb,
   "mobile-development": makeMobile,
   "cloud-solutions": makeCloud,
   "data-analytics": makeAnalytics,

@@ -1,10 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { FadeInUp } from "../components/FadeInUp";
 import { PrimaryButton } from "../components/Buttons";
 import { ServiceProductStage } from "../components/ServiceProductStage";
 import { Seo, breadcrumbJsonLd, serviceJsonLd } from "../components/Seo";
 import { processSteps } from "../data/content";
-import { getServiceBySlug, services } from "../data/services";
+import { getServiceBySlug, getServicePath, services } from "../data/services";
 import { blogPosts } from "../data/blog";
 import { NotFound } from "./NotFound";
 
@@ -13,6 +13,7 @@ export function ServiceDetail() {
   const service = getServiceBySlug(slug);
 
   if (!service) return <NotFound />;
+  if (service.canonicalPath) return <Navigate to={service.canonicalPath} replace />;
 
   const [label, ...rest] = service.title.split(" ");
   const restTitle = rest.join(" ");
@@ -169,7 +170,7 @@ export function ServiceDetail() {
                 {related.map((item) => (
                   <li key={item.slug}>
                     <Link
-                      to={`/services/${item.slug}`}
+                      to={getServicePath(item)}
                       data-cursor="link"
                       className="group flex items-center justify-between border-t border-white/10 py-4 text-[#D4D4D8] hover:text-white"
                     >

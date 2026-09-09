@@ -13,7 +13,7 @@ import {
   getRelatedPosts,
   postPlainText,
 } from "../data/blog";
-import { getServiceBySlug } from "../data/services";
+import { getServiceBySlug, getServicePath } from "../data/services";
 import { siteConfig } from "../data/site";
 import { NotFound } from "./NotFound";
 
@@ -76,8 +76,16 @@ export function BlogPost() {
             <p className="mt-5 max-w-2xl text-[17px] leading-8 text-[#D4D4D8]">{post.excerpt}</p>
             <p className="mt-4 text-sm text-[#A1A1AA]">
               <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt)}</time>
+              {post.updatedAt && post.updatedAt !== post.publishedAt ? (
+                <>
+                  {" · Updated "}
+                  <time dateTime={post.updatedAt}>{formatPostDate(post.updatedAt)}</time>
+                </>
+              ) : null}
               {" · "}
               {minutes} min read
+              {" · "}
+              {post.author || siteConfig.name}
             </p>
           </FadeInUp>
 
@@ -112,7 +120,7 @@ export function BlogPost() {
               <PrimaryButton to="/contact">Start a project</PrimaryButton>
               {relatedService ? (
                 <Link
-                  to={`/services/${relatedService.slug}`}
+                  to={getServicePath(relatedService)}
                   data-cursor="link"
                   className="inline-flex items-center px-5 py-2.5 text-sm text-[#D4D4D8] hover:text-white"
                 >
@@ -155,12 +163,12 @@ function articleJsonLd(post, minutes) {
         description: post.seoDescription,
         image: post.image,
         datePublished: post.publishedAt,
-        dateModified: post.publishedAt,
+        dateModified: post.updatedAt || post.publishedAt,
         wordCount: postPlainText(post).split(/\s+/).length,
         timeRequired: `PT${minutes}M`,
         articleSection: post.category,
         mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
-        author: { "@type": "Organization", name: siteConfig.name },
+        author: { "@type": "Organization", name: post.author || siteConfig.name },
         publisher: {
           "@type": "Organization",
           name: siteConfig.name,

@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import { services } from "../data/services";
+import { getServicePath, services } from "../data/services";
 
 const serviceItems = services.map((service) => ({
   label: service.title,
-  href: `/services/${service.slug}`,
+  href: getServicePath(service),
 }));
 
 const capabilityItems = services.flatMap((service) =>
   service.capabilities.map((capability) => ({
     label: capability,
-    href: `/services/${service.slug}`,
+    href: getServicePath(service),
   })),
 );
 
