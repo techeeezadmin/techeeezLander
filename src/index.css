@@ -175,6 +175,10 @@ textarea,
   opacity: 1;
 }
 
+.custom-cursor.is-hidden {
+  opacity: 0;
+}
+
 .custom-cursor.is-disabled {
   opacity: 0.35;
 }
@@ -344,21 +348,17 @@ textarea,
   transform: translateX(-50%);
 }
 
-.logo-mark .sq-a,
-.logo-mark .sq-b {
-  transform-box: fill-box;
-  transform-origin: center;
+.logo-mark {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
   transition: transform 0.35s var(--ease-out-expo);
 }
 
-.logo-mark:hover .sq-a,
-.group:hover .logo-mark .sq-a {
-  transform: translate(2px, 0);
-}
-
-.logo-mark:hover .sq-b,
-.group:hover .logo-mark .sq-b {
-  transform: rotate(8deg);
+.group:hover .logo-mark,
+.logo-mark:hover {
+  transform: scale(1.04);
 }
 
 .btn-arrow {

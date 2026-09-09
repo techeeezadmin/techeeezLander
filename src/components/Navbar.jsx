@@ -51,11 +51,11 @@ export function Navbar() {
         <Link
           to="/"
           data-cursor="link"
-          className="group relative z-10 flex items-center gap-2.5 text-white"
+          className="group relative z-10 flex cursor-pointer items-center gap-2.5 text-white"
           aria-label="Tech Eeez home"
         >
-          <Logo className="h-7 w-7" />
-          <span className="text-sm font-semibold tracking-[0.14em]">
+          <Logo className="h-9 w-9" />
+          <span className="text-sm font-semibold tracking-[0.18em] text-white">
             {siteConfig.shortName}
           </span>
         </Link>

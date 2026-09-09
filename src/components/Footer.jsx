@@ -48,10 +48,17 @@ export function Footer() {
 
       <div className="mx-auto mb-16 grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <Logo className="h-7 w-7" />
-            <span className="text-lg font-semibold tracking-[0.08em]">{siteConfig.shortName}</span>
-          </div>
+          <Link
+            to="/"
+            data-cursor="link"
+            className="group flex items-center gap-2.5 text-white"
+            aria-label="Tech Eeez home"
+          >
+            <Logo className="h-9 w-9" />
+            <span className="text-lg font-semibold tracking-[0.18em] text-white">
+              {siteConfig.shortName}
+            </span>
+          </Link>
           <p className="mt-4 max-w-xs text-sm leading-6 text-[#D4D4D8]">
             Software engineering for businesses that need systems, not templates.
           </p>

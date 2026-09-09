@@ -65,6 +65,8 @@ export function organizationJsonLd() {
         "@type": "ProfessionalService",
         name: siteConfig.name,
         url: siteConfig.url,
+        logo: `${siteConfig.url}/logo.png`,
+        image: `${siteConfig.url}/logo.png`,
         email: siteConfig.email,
         telephone: siteConfig.phone,
         description: siteConfig.description,
