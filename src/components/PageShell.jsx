@@ -1,10 +1,12 @@
 import { FadeInUp } from "./FadeInUp";
+import { Breadcrumbs } from "./Breadcrumbs";
 
-export function PageShell({ eyebrow, title, description, children, serifWord }) {
+export function PageShell({ eyebrow, title, description, children, serifWord, crumbs }) {
   return (
     <main className="px-6 pb-24 pt-36">
       <div className="mx-auto max-w-7xl">
         <FadeInUp>
+          {crumbs ? <div className="mb-6"><Breadcrumbs items={crumbs} /></div> : null}
           {eyebrow ? (
             <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
               {eyebrow}

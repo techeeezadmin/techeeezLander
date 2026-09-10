@@ -27,9 +27,10 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-of-service" element={<Navigate to="/terms" replace />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

@@ -31,6 +31,10 @@ export function Work() {
         eyebrow="Work"
         title="Selected"
         serifWord="clients."
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Work", path: "/work" },
+        ]}
         description="A focused snapshot of organizations that have worked with Tech Eeez."
       >
         <FadeInUp>

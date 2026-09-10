@@ -25,7 +25,7 @@ export function Blog() {
       <Seo
         title="Tech Eeez Blog | Web, Cloud, AI & Software Insights from Mumbai"
         description="Read practical articles from Tech Eeez on SEO, AI search, web development, cloud, data, security, and software for growing businesses in Mumbai."
-        path={topic === "all" ? "/blog" : `/blog?topic=${topic}`}
+        path="/blog"
         jsonLd={blogIndexJsonLd()}
       />
       <main className="blog-page">

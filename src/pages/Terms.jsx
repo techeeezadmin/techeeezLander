@@ -5,12 +5,16 @@ export function Terms() {
   return (
     <>
       <Seo
-        title="Terms"
+        title="Terms of Service"
         description="Terms and conditions for Tech Eeez website usage."
         path="/terms"
       />
       <PageShell
         title="Terms & Conditions"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Terms", path: "/terms" },
+        ]}
         description="This is a placeholder terms page and should be replaced with legally approved terms."
       >
         <div className="max-w-[720px] space-y-5 text-[16px] leading-7 text-[#D4D4D8]">

@@ -14,7 +14,7 @@ export function Footer() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#121214] via-[#121214]/65 to-[#121214]" />
 
@@ -117,20 +117,22 @@ export function Footer() {
 
       <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-[#A1A1AA] md:flex-row">
         <span>© 2026 {siteConfig.name}. All rights reserved.</span>
-        <div className="flex gap-5">
-          {siteConfig.social.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor="link"
-              className="hover:text-white"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
+        {siteConfig.social.length ? (
+          <div className="flex gap-5">
+            {siteConfig.social.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="link"
+                className="hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        ) : null}
       </div>
     </footer>
   );

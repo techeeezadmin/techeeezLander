@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { CountUp } from "../components/CountUp";
 import { Process } from "../components/Process";
@@ -24,7 +25,8 @@ export function About() {
       <main className="px-6 pb-8 pt-36">
         <div className="mx-auto max-w-7xl">
           <FadeInUp>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
+            <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
+            <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
               About
             </p>
             <h1 className="mt-5 max-w-4xl text-[clamp(2.6rem,6vw,5.2rem)] font-medium leading-[1.02] tracking-tight">

@@ -4,7 +4,11 @@
   <url><loc>https://techeeez.com/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://techeeez.com/services</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://techeeez.com/seo</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techeeez.com/services/seo-ai-search</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/work</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://techeeez.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://techeeez.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://techeeez.com/services/ai-solutions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/web-development</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/mobile-development</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -12,20 +16,15 @@
   <url><loc>https://techeeez.com/services/data-analytics</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/cybersecurity</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/system-integration</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techeeez.com/work</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techeeez.com/contact</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://techeeez.com/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techeeez.com/blog/how-modern-web-development-helps-businesses-scale</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/seo-starts-when-the-website-is-built</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/how-ai-search-changes-discovery</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/technical-seo-and-local-search-for-growing-sites</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/web-development-vs-website-builders</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/why-businesses-are-moving-to-cloud-solutions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/aws-vs-azure-understanding-cloud-infrastructure</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/how-data-analytics-improves-business-decisions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/why-cybersecurity-should-be-part-of-digital-strategy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/how-api-integration-connects-modern-business-systems</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/blog/native-vs-cross-platform-mobile-app-development</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://techeeez.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://techeeez.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://techeeez.com/blog/how-modern-web-development-helps-businesses-scale</loc><lastmod>2026-07-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/web-development-vs-website-builders</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/why-businesses-are-moving-to-cloud-solutions</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/aws-vs-azure-understanding-cloud-infrastructure</loc><lastmod>2026-07-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/how-data-analytics-improves-business-decisions</loc><lastmod>2026-07-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/why-cybersecurity-should-be-part-of-digital-strategy</loc><lastmod>2026-07-13</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/how-api-integration-connects-modern-business-systems</loc><lastmod>2026-07-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/native-vs-cross-platform-mobile-app-development</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/seo-starts-when-the-website-is-built</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/how-ai-search-changes-discovery</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://techeeez.com/blog/technical-seo-and-local-search-for-growing-sites</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

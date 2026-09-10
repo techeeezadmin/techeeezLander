@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 import { Seo, breadcrumbJsonLd, serviceJsonLd } from "../components/Seo";
@@ -39,7 +40,14 @@ export function SeoPage() {
           <div className="pointer-events-none absolute -right-24 top-24 -z-10 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="mx-auto max-w-7xl">
             <FadeInUp>
-              <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-[#A1A1AA]">
+              <Breadcrumbs
+                items={[
+                  { name: "Home", path: "/" },
+                  { name: "Services", path: "/services" },
+                  { name: "SEO & AI Search", path: "/seo" },
+                ]}
+              />
+              <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#A1A1AA]">
                 SEO & AI Search
               </p>
               <h1 className="mt-5 max-w-5xl text-[clamp(2.6rem,7vw,6.2rem)] font-medium leading-[0.95] tracking-tight">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { SubmitButton } from "../components/Buttons";
 import { Seo, organizationJsonLd, breadcrumbJsonLd } from "../components/Seo";
@@ -54,7 +55,8 @@ export function Contact() {
       <main className="mx-auto w-full max-w-7xl px-6 pb-20 pt-36">
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-start">
           <FadeInUp>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
+            <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
+            <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
               Contact
             </p>
             <h1 className="mt-5 text-[clamp(2.8rem,6vw,5.4rem)] font-medium leading-[0.95] tracking-tight">

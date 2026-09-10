@@ -11,6 +11,10 @@ export function Privacy() {
       />
       <PageShell
         title="Privacy Policy"
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy-policy" },
+        ]}
         description="This page provides a baseline policy template and should be reviewed with legal counsel before production use."
       >
         <div className="max-w-[720px] space-y-5 text-[16px] leading-7 text-[#D4D4D8]">

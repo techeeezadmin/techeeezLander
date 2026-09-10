@@ -32,12 +32,7 @@ export const siteConfig = {
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ],
-  social: [
-    { href: "https://www.instagram.com/", label: "Instagram" },
-    { href: "https://www.youtube.com/", label: "YouTube" },
-    { href: "https://www.linkedin.com/", label: "LinkedIn" },
-    { href: "https://x.com/", label: "Twitter / X" },
-  ],
+  social: [],
 };
 
 export const videos = {

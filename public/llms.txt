@@ -1,0 +1,25 @@
+# Tech Eeez
+
+> Tech Eeez is a software and digital solutions company in Mumbai. We build websites, AI products, and software systems, and we help businesses become easier to find in Google Search and AI-powered discovery.
+
+Site: https://techeeez.com
+Contact: support@techeeez.com
+Phone: +91 9619118917
+Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumbai - 400064, India
+
+## Services
+
+- [SEO & AI Search](https://techeeez.com/seo): Technical SEO, content, performance, structured data, and AI search readiness. We do not guarantee #1 rankings or AI citations.
+- [AI Solutions](https://techeeez.com/services/ai-solutions)
+- [Web Development](https://techeeez.com/services/web-development)
+- [Mobile Development](https://techeeez.com/services/mobile-development)
+- [Cloud Solutions](https://techeeez.com/services/cloud-solutions)
+- [Data Analytics](https://techeeez.com/services/data-analytics)
+- [Cybersecurity](https://techeeez.com/services/cybersecurity)
+- [System Integration](https://techeeez.com/services/system-integration)
+
+## Optional
+
+- [About](https://techeeez.com/about)
+- [Blog](https://techeeez.com/blog)
+- [Contact](https://techeeez.com/contact)

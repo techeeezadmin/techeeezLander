@@ -21,6 +21,10 @@ export function Services() {
         eyebrow="Services"
         title="Eight capabilities. One technology"
         serifWord="partner."
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ]}
         description="Our services help businesses get found, build faster, and operate with clarity — from SEO and AI search to web, cloud, mobile, and secure systems."
       >
         <div className="-mx-6 mb-16">

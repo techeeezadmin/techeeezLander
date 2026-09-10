@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { PrimaryButton } from "../components/Buttons";
 import { ServiceProductStage } from "../components/ServiceProductStage";
@@ -38,7 +39,16 @@ export function ServiceDetail() {
         ]}
       />
       <main className="relative" style={{ "--accent": service.accent }}>
-        <div className="mx-auto max-w-7xl px-6 pt-32 md:hidden">
+        <div className="mx-auto max-w-7xl px-6 pt-28">
+          <Breadcrumbs
+            items={[
+              { name: "Home", path: "/" },
+              { name: "Services", path: "/services" },
+              { name: service.title, path: `/services/${service.slug}` },
+            ]}
+          />
+        </div>
+        <div className="mx-auto max-w-7xl px-6 pt-8 md:hidden">
           <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#D4D4D8]">
             {service.shortLabel}
           </p>

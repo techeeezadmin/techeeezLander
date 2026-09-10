@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { BlogCard } from "../components/BlogCard";
 import { BlogCover } from "../components/BlogCover";
@@ -58,15 +59,13 @@ export function BlogPost() {
       <main className="blog-article">
         <article className="mx-auto max-w-5xl px-6 pb-28 pt-32">
           <FadeInUp>
-            <nav className="text-sm text-[#A1A1AA]" aria-label="Breadcrumb">
-              <Link to="/blog" className="hover:text-white">
-                Blog
-              </Link>
-              <span className="mx-2">/</span>
-              <Link to={`/blog?topic=${post.topic}`} className="hover:text-white">
-                {post.category}
-              </Link>
-            </nav>
+            <Breadcrumbs
+              items={[
+                { name: "Home", path: "/" },
+                { name: "Blog", path: "/blog" },
+                { name: post.title, path: `/blog/${post.slug}` },
+              ]}
+            />
             <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ color: accent }}>
               {post.kicker}
             </p>

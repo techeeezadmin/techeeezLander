@@ -10,6 +10,7 @@ export function NotFound() {
         title="Page not found"
         description="The page you are looking for does not exist."
         path="/404"
+        robots="noindex, follow"
       />
       <main className="flex min-h-[80vh] flex-col items-center justify-center px-6 pt-32 text-center">
         <div className="broken-grid mb-12" aria-hidden="true">
