@@ -14,7 +14,12 @@ Status: **Baseline complete. Awaiting owner approval before production changes a
 - Competitor set for three markets
 - AEO / GEO / schema / internal-link / CRO / international architecture assessment
 - 30-day roadmap drafted
-- Daily 09:00 Asia/Kolkata automation requested
+- Daily 09:00 Asia/Kolkata automation **configured**
+  - Name: Tech Eeez daily SEO AEO GEO agent
+  - ID: `e0e87afe-d89c-4e45-837c-26b0bd696cea`
+  - Next run: 2026-11-14 09:00 IST (2026-11-14T03:30:00Z)
+  - Cadence: daily
+- Git branch pushed: `seo/baseline-audit-2026-11-13` (commit `50955c7`)
 
 ### Blocked — needs owner
 
