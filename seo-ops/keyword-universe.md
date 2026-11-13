@@ -40,9 +40,9 @@ Target these with service pages, not blog posts. One cluster → one URL.
 | --- | --- | --- | --- | --- | --- |
 | AI automation company UK | C | High | none | future `/uk/ai-automation` after unique content | Do not publish doorway page yet |
 | AI automation services UK | C | High | none | same hub | Research volume in Planner |
-| AI agent development UK | C | High | none | future `/uk/ai-agents` or `/services/ai-agents` | Confirm we sell this |
+| AI agent development UK | C | High | none (live until deploy) | `/services/ai-agents` | Service page in PR; no `/uk/` doorway |
 | AI development company UK | C | High | none | `/services/ai-solutions` (near-term) | Strengthen page first |
-| custom software development UK | C | High | none | `/services` or new software page | Confirm SaaS/custom software offer |
+| custom software development UK | C | High | none | `/services/saas-development` | Service page in PR |
 | web development agency UK | C | High | `/services/web-development` | same | Add UK-relevant copy, no fake office |
 | software development company UK | C | High | none | software hub | High competition; supporting content first |
 
@@ -50,8 +50,8 @@ Target these with service pages, not blog posts. One cluster → one URL.
 
 | Keyword | Intent | Commercial | Existing URL | Recommended URL | Next action |
 | --- | --- | --- | --- | --- | --- |
-| AI automation company Dubai | C | High | none | future `/uae/ai-automation` | Unique UAE content required |
-| AI agent development Dubai | C | High | none | future `/uae/ai-agents` | Confirm offer |
+| AI automation company Dubai | C | High | none | `/services/ai-automation` | Unique UAE copy later; no `/uae/` doorway |
+| AI agent development Dubai | C | High | none | `/services/ai-agents` | Offer confirmed |
 | AI chatbot development Dubai | C | High | none | `/services/ai-solutions` near-term | |
 | software development company Dubai | C | High | none | software hub | Heavy local-directory SERP |
 | web development company Dubai | C | High | `/services/web-development` | same | |
@@ -61,19 +61,26 @@ Target these with service pages, not blog posts. One cluster → one URL.
 
 | Keyword | Intent | Commercial | Existing URL | Recommended URL | Next action |
 | --- | --- | --- | --- | --- | --- |
-| AI automation company Mumbai | C | High | `/services/ai-solutions` | same, then `/mumbai/ai-automation` if unique | Strongest geo we can claim (verified office) |
-| AI agent development Mumbai | C | High | `/services/ai-solutions` | split only if approved | |
+| AI automation company Mumbai | C | High | `/services/ai-solutions` | `/services/ai-automation` | Strongest geo we can claim (verified office) |
+| AI agent development Mumbai | C | High | `/services/ai-solutions` | `/services/ai-agents` | Offer confirmed |
 | AI development company Mumbai | C | High | `/services/ai-solutions` | same | |
 | software development company Mumbai | C | High | `/` and `/services` | `/services` | Competitive |
 | website development company Mumbai | C | High | `/services/web-development` | same | Best current on-page match |
 | mobile app development company Mumbai | C | High | `/services/mobile-development` | same | |
 
+## Third-party volume notes (not Keyword Planner)
+
+RankDude, 11 Nov 2026, Google Trends–based estimates for **“ai agents”** (https://rankdude.ai/statistics/ai-agents/search-trends): ~301,000/month worldwide, ~49,500 India, ~9,900 UK. Head term is too broad to rank. Service pages target `AI agent development` + market, not the head term. These are **not** Google Keyword Planner figures.
+
+Google Ads Keyword Planner is allowed by the owner; this host has no Ads login, so UK / UAE / India commercial volumes stay unverified until that account is connected.
+
 ## P2 — supporting commercial
 
 - AI chatbot development UK / Dubai / Mumbai
 - AI workflow automation UK / Dubai
-- AI voice agent development (P2/P4 until offer confirmed)
-- SaaS development company UK / India
+- AI voice agent development → `/services/ai-voice-agents` (offer confirmed)
+- RAG / retrieval-augmented generation → `/services/rag-applications` (offer confirmed)
+- SaaS development company UK / India → `/services/saas-development` (offer confirmed)
 - business process automation India
 - AI integration services UK / India
 - web design agency Dubai

@@ -14,12 +14,12 @@ P1 technical and measurement. No new geo pages.
 
 | # | Action | Impact | Approval |
 | --- | --- | --- | --- |
-| 1 | Stop SPA fallback: serve prerendered `dist/**/index.html` and return HTTP 404 for unknown URLs | Critical. Unique titles, canonicals, and schema actually reach crawlers and social cards | **Yes — production/hosting** |
+| 1 | Stop SPA fallback: serve prerendered `dist/**/index.html` and return HTTP 404 for unknown URLs | Critical. Unique titles, canonicals, and schema actually reach crawlers and social cards | **PR ready** (`seo/serve-prerendered-html`). Deploy only after merge + owner instruction |
 | 2 | Add GA4 + Search Console verification | Makes every KPI in the brief measurable | **Yes — tracking codes** |
 | 3 | PNG Open Graph image (1200×630) instead of `og.svg` | Social and some crawlers ignore SVG OG | PR is enough |
 | 4 | Primary nav: link `/about`, `/services`, `/contact` instead of hash-only homepage jumps | Internal PageRank to money pages | PR |
-| 5 | Render service FAQs on service templates + FAQPage JSON-LD where FAQs are visible | AEO + on-page depth | PR |
-| 6 | Confirm sold services (agents, automation, voice, RAG, SaaS) | Prevents pages for work we cannot deliver | Owner |
+| 5 | Render service FAQs on service templates + FAQPage JSON-LD where FAQs are visible | AEO + on-page depth | **PR ready** (`seo/services-whatsapp-linkedin`) |
+| 6 | Confirm sold services (agents, automation, voice, RAG, SaaS) | Prevents pages for work we cannot deliver | **Done.** Pages on `seo/services-whatsapp-linkedin` |
 
 ## Week 2 — Money pages (21–27 Nov)
 
@@ -28,8 +28,8 @@ P1 technical and measurement. No new geo pages.
 | 7 | Rewrite homepage H1/description around “AI and software engineering partner in Mumbai, working with UK, UAE and India businesses” | Align visible H1 with commercial intent | PR |
 | 8 | Expand `/services/ai-solutions` with automation vs agents vs assistants, implementation steps, honest constraints, CTAs | P1 cluster currently under-served | PR + publish |
 | 9 | Expand `/services/web-development` and `/services/mobile-development` with process, stack, and who it is for | Existing URLs, wasted if thin | PR |
-| 10 | Replace `mailto:` contact with a server-side form (or Formspree/Getform) and optional WhatsApp | Conversion | **Yes — form backend / WhatsApp number** |
-| 11 | First article: AI agents vs chatbots (1,500+ words, sourced, links to AI service) | P3 → P1 assist | Publish permission |
+| 10 | Replace `mailto:` contact with a server-side form (or Formspree/Getform) and optional WhatsApp | Conversion | WhatsApp **shown in PR**. Form backend still needs owner setup |
+| 11 | First article: AI agents vs chatbots (1,500+ words, sourced, links to AI service) | P3 → P1 assist | **PR only** — do not publish |
 
 ## Week 3 — Authority and geo honesty (28 Nov – 4 Dec)
 

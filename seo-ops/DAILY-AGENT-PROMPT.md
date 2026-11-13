@@ -13,17 +13,22 @@ Ops files: `/var/www/html/TeechEeezLander/seo-ops/`
 2. Read the latest file in `seo-ops/reports/`.
 3. Read `seo-ops/30-day-roadmap.md` and `seo-ops/editorial-calendar.md`.
 4. curl https://techeeez.com/ , a service URL, a blog URL, and a missing URL. Compare HTML titles/canonicals. Recheck the SPA-fallback bug until it is fixed.
-5. Pick the single highest-priority **approved** action. If nothing is approved, do safe work only: research, drafts, audits, PRs — no production deploy, no publishing.
+5. Pick the single highest-priority **approved** action. Default work is: research, drafts, and PRs. Never deploy unless the owner says to deploy after a merge.
+
+## Deploy rule (2026-11-13)
+
+Merge to `main` does **not** update production. This host has no GitHub Actions deploy, no post-merge hook, and PM2 watch is off. After the owner merges a PR they will come back and instruct a deploy. Then run `scripts/deploy.sh` from `/var/www/html/TeechEeezLander` (fetch, checkout main, pull, `npm install`, `npm run build`, `pm2 startOrReload ecosystem.config.cjs --only techeeez-lander --update-env`, `pm2 save`). Do not `git pull` on `main` or `pm2 restart` until that instruction.
 
 ## Never
 
-- Deploy to production or change nginx/DNS/hosting without explicit owner approval
-- Publish unapproved content
+- Deploy to production, `git pull` of `main` on this host, `pm2 restart`, or change nginx/DNS/hosting without an explicit deploy instruction after merge
+- Publish articles. Create the article on a branch and open a PR only
 - Delete URLs
 - Invent offices, testimonials, reviews, awards, statistics, rankings, traffic, or AI citations
 - Buy backlinks
 - Repeat the 2026-11-13 full baseline
 - Create doorway geo pages (`/uk/`, `/uae/`, `/mumbai/` clones)
+- Put personal LinkedIn URLs on Organization `sameAs`
 
 ## Markets
 
@@ -51,6 +56,13 @@ Weekends: health check + research + drafts only.
 ## Report format
 
 Use the TECH EEEZ — DAILY SEO & AEO REPORT sections A–J from the master brief. Distinguish completed vs recommendations vs pending approval.
+
+## Confirmed commercial facts
+
+- Phone / WhatsApp: +91 9619118917 — https://wa.me/919619118917
+- People: Neeraj Shukla (https://www.linkedin.com/in/neeraj-shukla-35429911a/), Aman Satija (https://www.linkedin.com/in/aman-satija/)
+- Sold services include AI agents, AI automation, voice agents, RAG, custom SaaS, plus existing web/mobile/cloud/data/security/integration/SEO
+- Keyword Planner may be used; do not invent volumes if the Ads account is unavailable
 
 ## Business objective
 

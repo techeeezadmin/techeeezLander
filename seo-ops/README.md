@@ -21,4 +21,4 @@ Persistent working files for the autonomous SEO / AEO / GEO agent.
 
 ## Current phase
 
-**Phase 0 — Baseline audit (2026-11-13).** Major content and production changes wait for owner approval of the roadmap.
+**Phase 1 — PRs only (from 2026-11-13).** Owner approved PR workflow. Merge does not auto-deploy. Wait for an explicit deploy instruction after review.
