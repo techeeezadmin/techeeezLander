@@ -10,7 +10,7 @@ export function Services() {
     <>
       <Seo
         title="Software, SEO & Digital Services | Tech Eeez"
-        description="Explore Tech Eeez services in SEO, AI search, web, mobile, cloud, analytics, cybersecurity, and system integration — built for businesses in Mumbai."
+        description="Explore Tech Eeez services in AI agents, automation, voice agents, RAG, custom SaaS, SEO, web, mobile, cloud, analytics, cybersecurity, and system integration."
         path="/services"
         jsonLd={breadcrumbJsonLd([
           { name: "Home", path: "/" },
@@ -19,13 +19,13 @@ export function Services() {
       />
       <PageShell
         eyebrow="Services"
-        title="Eight capabilities. One technology"
+        title="AI, software, and digital delivery. One technology"
         serifWord="partner."
         crumbs={[
           { name: "Home", path: "/" },
           { name: "Services", path: "/services" },
         ]}
-        description="Our services help businesses get found, build faster, and operate with clarity — from SEO and AI search to web, cloud, mobile, and secure systems."
+        description="Our services help businesses get found, build faster, and operate with clarity — from AI agents and custom software to SEO, web, cloud, mobile, and secure systems."
       >
         <div className="-mx-6 mb-16">
           <ExpertiseMarquee />

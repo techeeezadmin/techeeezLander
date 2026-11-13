@@ -2,7 +2,13 @@ import { useEffect } from "react";
 import { siteConfig } from "../data/site";
 import { absoluteUrl } from "../lib/schema";
 
-export { breadcrumbJsonLd, organizationJsonLd, serviceJsonLd } from "../lib/schema";
+export {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  organizationJsonLd,
+  personJsonLd,
+  serviceJsonLd,
+} from "../lib/schema";
 
 export function Seo({ title, description, path = "/", jsonLd, image, robots = "index, follow" }) {
   const serialized = jsonLd ? JSON.stringify(jsonLd) : "";

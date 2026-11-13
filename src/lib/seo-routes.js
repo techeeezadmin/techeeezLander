@@ -1,7 +1,7 @@
 import { blogPosts, postPlainText } from "../data/blog";
 import { services } from "../data/services";
 import { siteConfig } from "../data/site";
-import { breadcrumbJsonLd, organizationJsonLd, serviceJsonLd } from "./schema";
+import { breadcrumbJsonLd, faqJsonLd, organizationJsonLd, personJsonLd, serviceJsonLd } from "./schema";
 
 const defaultImage = `${siteConfig.url}/og.svg`;
 
@@ -27,15 +27,19 @@ const staticPages = [
       "Tech Eeez is a software solutions company in Mumbai focused on innovation and business growth.",
     changefreq: "weekly",
     priority: "0.8",
+    jsonLd: [
+      organizationJsonLd(),
+      ...siteConfig.people.map((person) => personJsonLd(person)),
+    ],
   },
   {
     path: "/services",
     title: "Software, SEO & Digital Services | Tech Eeez",
     description:
-      "Explore Tech Eeez services in SEO, AI search, web, mobile, cloud, analytics, cybersecurity, and system integration — built for businesses in Mumbai.",
-    h1: "Eight capabilities. One technology partner.",
+      "Explore Tech Eeez services in AI agents, automation, voice agents, RAG, custom SaaS, SEO, web, mobile, cloud, analytics, cybersecurity, and system integration.",
+    h1: "AI, software, and digital delivery. One technology partner.",
     excerpt:
-      "SEO, AI search, web, mobile, cloud, analytics, cybersecurity, and system integration.",
+      "AI agents, automation, voice agents, RAG, custom SaaS, SEO, web, mobile, cloud, analytics, cybersecurity, and system integration.",
     changefreq: "weekly",
     priority: "0.8",
   },
@@ -85,9 +89,9 @@ const staticPages = [
     path: "/contact",
     title: "Contact Tech Eeez | Build Your Next Digital Product",
     description:
-      "Talk to Tech Eeez in Mumbai about websites, SEO, AI search visibility, or software projects.",
+      "Talk to Tech Eeez in Mumbai about websites, SEO, AI, or software projects. Call or WhatsApp +91 9619118917.",
     h1: "Start a project",
-    excerpt: `Email ${siteConfig.email} or call ${siteConfig.phone}.`,
+    excerpt: `Email ${siteConfig.email}, call ${siteConfig.phone}, or WhatsApp ${siteConfig.phone}.`,
     changefreq: "monthly",
     priority: "0.8",
   },
@@ -131,7 +135,8 @@ export function getPublicRoutes() {
           { name: "Services", path: "/services" },
           { name: service.title, path: `/services/${service.slug}` },
         ]),
-      ],
+        faqJsonLd(service.faq),
+      ].filter(Boolean),
     }));
 
   const posts = blogPosts.map((post) => ({

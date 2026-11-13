@@ -35,6 +35,23 @@ export function SecondaryButton({ to, children, className = "", ...props }) {
   );
 }
 
+export function ExternalButton({ href, children, className = "" }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-cursor="button"
+      className={`${shared} border border-white/10 bg-[#2A2A32] text-white hover:bg-[#35353E] ${className}`}
+    >
+      {children}
+      <span className="btn-arrow" aria-hidden>
+        →
+      </span>
+    </a>
+  );
+}
+
 export function SubmitButton({ children, loading = false, className = "" }) {
   return (
     <button

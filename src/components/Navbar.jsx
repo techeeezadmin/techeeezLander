@@ -3,19 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { Logo } from "./Logo";
 import { siteConfig } from "../data/site";
 
-function isActive(href, pathname, hash) {
-  if (pathname === "/seo" || pathname === "/services/seo-ai-search") return href === "/seo";
-  if (pathname === "/about") return href === "/#about";
-  if (pathname.startsWith("/services")) return href === "/#services";
-  if (pathname === "/work") return href === "/#work";
-  if (pathname.startsWith("/blog")) return href === "/blog";
-  if (pathname === "/contact") return href === "/#contact";
-  if (pathname !== "/") return false;
-  if (href === "/#about") return hash === "#about";
-  if (href === "/#services") return hash === "#services";
-  if (href === "/#work") return hash === "#work";
-  if (href === "/#contact") return hash === "#contact";
-  return false;
+function isActive(href, pathname) {
+  if (href === "/seo") return pathname === "/seo" || pathname === "/services/seo-ai-search";
+  if (href === "/services") return pathname === "/services" || pathname.startsWith("/services/");
+  if (href === "/blog") return pathname === "/blog" || pathname.startsWith("/blog/");
+  return pathname === href;
 }
 
 export function Navbar() {
@@ -70,7 +62,7 @@ export function Navbar() {
               to={link.href}
               data-cursor="link"
               className={`nav-link text-sm font-medium text-[#D4D4D8] transition-colors hover:text-white ${
-                isActive(link.href, location.pathname, location.hash) ? "is-active text-white" : ""
+                isActive(link.href, location.pathname) ? "is-active text-white" : ""
               }`}
             >
               {link.label}
@@ -131,6 +123,14 @@ export function Navbar() {
           >
             Get started
           </Link>
+          <a
+            href={siteConfig.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex w-fit text-sm text-[#D4D4D8]"
+          >
+            WhatsApp {siteConfig.phone}
+          </a>
         </nav>
       </div>
     </header>

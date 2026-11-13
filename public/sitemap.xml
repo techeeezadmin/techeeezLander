@@ -10,6 +10,11 @@
   <url><loc>https://techeeez.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://techeeez.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://techeeez.com/services/ai-solutions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/services/ai-agents</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/services/ai-automation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/services/ai-voice-agents</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/services/rag-applications</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techeeez.com/services/saas-development</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/web-development</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/mobile-development</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techeeez.com/services/cloud-solutions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>

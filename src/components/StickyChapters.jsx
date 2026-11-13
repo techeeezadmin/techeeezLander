@@ -1,5 +1,5 @@
 import { videos } from "../data/site";
-import { services } from "../data/services";
+import { showcaseServices } from "../data/services";
 
 const CHAPTERS = [
   {
@@ -32,7 +32,7 @@ const CHAPTERS = [
         <span className="font-serif italic font-normal">endless use cases.</span>
       </>
     ),
-    line: "AI, web, mobile, cloud, analytics, security, integration.",
+    line: "AI agents, automation, web, mobile, cloud, analytics, security, integration.",
     tint: "cyan",
     chips: true,
   },
@@ -63,7 +63,7 @@ export function StickyChapters() {
             <span>{chapter.line}</span>
             {chapter.chips ? (
               <ul className="sticky-stack__chips">
-                {services.map((service) => (
+                {showcaseServices.map((service) => (
                   <li key={service.slug} style={{ "--accent": service.accent }}>
                     {service.shortLabel}
                   </li>

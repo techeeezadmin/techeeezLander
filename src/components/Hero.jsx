@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { FadeInUp } from "./FadeInUp";
-import { PrimaryButton, SecondaryButton } from "./Buttons";
+import { ExternalButton, PrimaryButton, SecondaryButton } from "./Buttons";
 import { LogoMarquee } from "./LogoMarquee";
-import { videos } from "../data/site";
+import { siteConfig, videos } from "../data/site";
 import { prefersReducedMotion } from "../lib/motion";
 
 export function Hero() {
@@ -93,7 +93,8 @@ export function Hero() {
 
         <FadeInUp delay={350} className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <PrimaryButton to="/contact">Get started</PrimaryButton>
-          <SecondaryButton to="/#services">Learn more</SecondaryButton>
+          <ExternalButton href={siteConfig.whatsapp}>WhatsApp {siteConfig.phone}</ExternalButton>
+          <SecondaryButton to="/services">Learn more</SecondaryButton>
         </FadeInUp>
       </div>
 
