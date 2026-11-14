@@ -101,11 +101,13 @@ export function createStaticServer() {
   });
 }
 
-const isDirect =
-  process.argv[1] &&
-  (process.argv[1].endsWith("static-server.mjs") || process.argv[1].includes("static-server"));
+const thisFile = fileURLToPath(import.meta.url);
+const launchedByPm2 = process.env.pm_id != null;
+const launchedDirect = process.argv.some(
+  (arg) => resolve(arg) === thisFile || String(arg).includes("static-server.mjs"),
+);
 
-if (isDirect) {
+if (launchedByPm2 || launchedDirect) {
   const server = createStaticServer();
   server.listen(PORT, HOST, () => {
     console.log(`Serving ${DIST} on http://${HOST}:${PORT}`);
