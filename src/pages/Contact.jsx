@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
-import { SubmitButton } from "../components/Buttons";
+import { ExternalButton, SubmitButton } from "../components/Buttons";
 import { Seo, organizationJsonLd, breadcrumbJsonLd } from "../components/Seo";
 import { siteConfig } from "../data/site";
 
@@ -42,7 +42,7 @@ export function Contact() {
     <>
       <Seo
         title="Contact Tech Eeez | Build Your Next Digital Product"
-        description="Talk to Tech Eeez in Mumbai about websites, SEO, AI search visibility, or software projects."
+        description="Talk to Tech Eeez in Mumbai about websites, SEO, AI, or software projects. Call or WhatsApp +91 9619118917."
         path="/contact"
         jsonLd={[
           organizationJsonLd(),
@@ -64,8 +64,14 @@ export function Contact() {
               <span className="font-serif italic font-normal">next.</span>
             </h1>
             <p className="mt-6 max-w-md text-[16px] leading-7 text-[#D4D4D8]">
-              Have a project in mind? Need a technology partner in Mumbai? Talk to Tech Eeez.
+              Have a project in mind? Need a technology partner in Mumbai? Talk to Tech Eeez
+              by email, phone, or WhatsApp.
             </p>
+            <div className="mt-8">
+              <ExternalButton href={siteConfig.whatsapp}>
+                WhatsApp {siteConfig.phone}
+              </ExternalButton>
+            </div>
           </FadeInUp>
 
           <FadeInUp delay={80}>
@@ -117,7 +123,7 @@ export function Contact() {
           </FadeInUp>
         </div>
 
-        <address className="mt-24 grid gap-6 border-t border-white/10 pt-10 text-sm not-italic text-[#D4D4D8] md:grid-cols-3">
+        <address className="mt-24 grid gap-6 border-t border-white/10 pt-10 text-sm not-italic text-[#D4D4D8] md:grid-cols-4">
           <p>
             {siteConfig.name}
             <br />
@@ -128,9 +134,27 @@ export function Contact() {
             {siteConfig.address.city}
           </p>
           <p>
-            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>{siteConfig.phone}</a>
+            Phone
+            <br />
+            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="text-white">
+              {siteConfig.phone}
+            </a>
           </p>
           <p>
+            WhatsApp
+            <br />
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              {siteConfig.phone}
+            </a>
+          </p>
+          <p>
+            Email
+            <br />
             <a href={`mailto:${siteConfig.email}`} className="text-white">
               {siteConfig.email}
             </a>

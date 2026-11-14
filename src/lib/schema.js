@@ -99,3 +99,27 @@ export function webpageJsonLd({ title, description, path }) {
     isPartOf: { "@id": `${siteConfig.url}/#website` },
   };
 }
+
+export function faqJsonLd(faq) {
+  if (!faq?.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+}
+
+export function personJsonLd(person) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: person.name,
+    url: person.href,
+    sameAs: [person.href],
+    worksFor: { "@id": `${siteConfig.url}/#organization` },
+  };
+}

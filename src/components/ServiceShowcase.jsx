@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { LazyServiceParticlesCanvas } from "../three/LazyServiceParticlesCanvas";
-import { getServicePath, services } from "../data/services";
+import { getServicePath, showcaseServices } from "../data/services";
 
-const COUNT = services.length;
+const COUNT = showcaseServices.length;
 
 export function ServiceShowcase() {
   const pinRef = useRef(null);
@@ -73,7 +73,7 @@ export function ServiceShowcase() {
     };
   }, []);
 
-  const service = services[active];
+  const service = showcaseServices[active];
   const [label, ...rest] = service.title.split(" ");
   const restTitle = rest.join(" ");
 
@@ -86,8 +86,8 @@ export function ServiceShowcase() {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         <LazyServiceParticlesCanvas
-          slug={services[fromIndex].slug}
-          nextSlug={services[toIndex].slug}
+          slug={showcaseServices[fromIndex].slug}
+          nextSlug={showcaseServices[toIndex].slug}
           morph={morph}
           accent={service.accent}
           burstKey={burstKey}
@@ -101,7 +101,7 @@ export function ServiceShowcase() {
               transform: `translate3d(-${progress * (COUNT - 1) * 100}vw, 0, 0)`,
             }}
           >
-            {services.map((item, index) => (
+            {showcaseServices.map((item, index) => (
               <ServiceCopy key={item.slug} item={item} index={index} />
             ))}
           </div>
@@ -112,7 +112,7 @@ export function ServiceShowcase() {
         )}
         <div className="absolute inset-x-0 bottom-0 z-20 px-6 pb-4 md:px-11">
           <div className="mb-3 hidden justify-between text-[11px] tracking-[0.18em] text-[#A1A1AA] md:flex">
-            {services.map((item, index) => (
+            {showcaseServices.map((item, index) => (
               <span
                 key={item.slug}
                 style={{ color: index === active ? service.accent : undefined }}

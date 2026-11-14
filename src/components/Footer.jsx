@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
-import { PrimaryButton, SecondaryButton } from "./Buttons";
+import { ExternalButton, PrimaryButton, SecondaryButton } from "./Buttons";
 import { siteConfig, videos } from "../data/site";
 import { services } from "../data/services";
 
@@ -26,6 +26,7 @@ export function Footer() {
         </h2>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <PrimaryButton to="/contact">Get started</PrimaryButton>
+          <ExternalButton href={siteConfig.whatsapp}>WhatsApp {siteConfig.phone}</ExternalButton>
           <SecondaryButton to="/services">Learn more</SecondaryButton>
         </div>
       </div>
@@ -107,6 +108,17 @@ export function Footer() {
               <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>{siteConfig.phone}</a>
             </p>
             <p>
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="link"
+                className="text-white"
+              >
+                WhatsApp {siteConfig.phone}
+              </a>
+            </p>
+            <p>
               <a href={`mailto:${siteConfig.email}`} className="text-white">
                 {siteConfig.email}
               </a>
@@ -117,22 +129,32 @@ export function Footer() {
 
       <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-[#A1A1AA] md:flex-row">
         <span>© 2026 {siteConfig.name}. All rights reserved.</span>
-        {siteConfig.social.length ? (
-          <div className="flex gap-5">
-            {siteConfig.social.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-cursor="link"
-                className="hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        ) : null}
+        <div className="flex flex-wrap justify-center gap-5">
+          {siteConfig.people.map((person) => (
+            <a
+              key={person.href}
+              href={person.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="link"
+              className="hover:text-white"
+            >
+              {person.name}
+            </a>
+          ))}
+          {siteConfig.social.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="link"
+              className="hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );

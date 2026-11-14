@@ -3,7 +3,7 @@ import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { CountUp } from "../components/CountUp";
 import { Process } from "../components/Process";
-import { Seo, organizationJsonLd, breadcrumbJsonLd } from "../components/Seo";
+import { Seo, organizationJsonLd, breadcrumbJsonLd, personJsonLd } from "../components/Seo";
 import { siteConfig } from "../data/site";
 import { getServicePath, services } from "../data/services";
 
@@ -16,6 +16,7 @@ export function About() {
         path="/about"
         jsonLd={[
           organizationJsonLd(),
+          ...siteConfig.people.map((person) => personJsonLd(person)),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
@@ -51,6 +52,29 @@ export function About() {
               </article>
             ))}
           </div>
+
+          <FadeInUp className="mt-16 border-t border-white/10 pt-10">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
+              Team
+            </p>
+            <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+              {siteConfig.people.map((person) => (
+                <li key={person.href}>
+                  <p className="text-2xl font-medium tracking-tight">{person.name}</p>
+                  <a
+                    href={person.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cursor="link"
+                    className="mt-2 inline-flex text-sm text-[#D4D4D8] hover:text-white"
+                  >
+                    LinkedIn
+                    <span className="btn-arrow">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </FadeInUp>
 
           <div className="mt-8">
             <Process />

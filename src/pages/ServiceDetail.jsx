@@ -1,11 +1,12 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
-import { PrimaryButton } from "../components/Buttons";
+import { ExternalButton, PrimaryButton } from "../components/Buttons";
 import { ServiceProductStage } from "../components/ServiceProductStage";
-import { Seo, breadcrumbJsonLd, serviceJsonLd } from "../components/Seo";
+import { Seo, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "../components/Seo";
 import { processSteps } from "../data/content";
-import { getServiceBySlug, getServicePath, services } from "../data/services";
+import { getServiceBySlug, getServicePath, relatedServices } from "../data/services";
+import { siteConfig } from "../data/site";
 import { blogPosts } from "../data/blog";
 import { NotFound } from "./NotFound";
 
@@ -18,7 +19,17 @@ export function ServiceDetail() {
 
   const [label, ...rest] = service.title.split(" ");
   const restTitle = rest.join(" ");
-  const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
+  const related = relatedServices(service);
+  const jsonLd = [
+    serviceJsonLd(service),
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/services" },
+      { name: service.title, path: `/services/${service.slug}` },
+    ]),
+  ];
+  const faqs = faqJsonLd(service.faq);
+  if (faqs) jsonLd.push(faqs);
   const relatedPosts = blogPosts
     .filter((post) => post.relatedService === service.slug)
     .slice(0, 2);
@@ -29,14 +40,7 @@ export function ServiceDetail() {
         title={service.seoTitle}
         description={service.seoDescription}
         path={`/services/${service.slug}`}
-        jsonLd={[
-          serviceJsonLd(service),
-          breadcrumbJsonLd([
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: service.title, path: `/services/${service.slug}` },
-          ]),
-        ]}
+        jsonLd={jsonLd}
       />
       <main className="relative" style={{ "--accent": service.accent }}>
         <div className="mx-auto max-w-7xl px-6 pt-28">
@@ -153,6 +157,23 @@ export function ServiceDetail() {
             </FadeInUp>
           </div>
 
+          {service.faq?.length ? (
+            <div className="mt-20 border-t border-white/10 pt-16">
+              <h2 className="text-2xl font-medium">Questions we hear often</h2>
+              <div className="mt-8 max-w-3xl space-y-4">
+                {service.faq.map((item) => (
+                  <details
+                    key={item.question}
+                    className="rounded-2xl border border-white/10 bg-[#18181c] px-5 py-4"
+                  >
+                    <summary className="cursor-pointer text-lg font-medium">{item.question}</summary>
+                    <p className="mt-3 text-sm leading-6 text-[#D4D4D8]">{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
           <FadeInUp className="mt-20 overflow-hidden border-t border-white/10 py-20">
             <h2 className="max-w-3xl text-[clamp(2rem,5vw,4rem)] font-medium leading-[1.05] tracking-tight">
               Need this capability in{" "}
@@ -163,6 +184,7 @@ export function ServiceDetail() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <PrimaryButton to="/contact">Start a project</PrimaryButton>
+              <ExternalButton href={siteConfig.whatsapp}>WhatsApp {siteConfig.phone}</ExternalButton>
               <Link
                 to="/services"
                 data-cursor="link"
