@@ -8,5 +8,6 @@ git checkout main
 git pull origin main
 npm install
 npm run build
-pm2 startOrReload ecosystem.config.cjs --only techeeez-lander --update-env
+pm2 delete techeeez-lander || true
+pm2 start ecosystem.config.cjs --only techeeez-lander --update-env
 pm2 save
