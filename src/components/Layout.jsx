@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
+import { Analytics } from "./Analytics";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { ScrollManager } from "./ScrollManager";
@@ -18,6 +19,7 @@ export function Layout() {
       >
         Skip to content
       </a>
+      <Analytics />
       <Atmosphere />
       <Grain />
       <CustomCursor />
