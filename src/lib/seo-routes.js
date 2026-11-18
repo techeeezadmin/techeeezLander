@@ -79,7 +79,7 @@ const staticPages = [
     path: "/blog",
     title: "Tech Eeez Blog | Web, Cloud, AI & Software Insights from Mumbai",
     description:
-      "Read practical articles from Tech Eeez on SEO, AI search, web development, cloud, data, security, and software for growing businesses in Mumbai.",
+      "Read practical articles from Tech Eeez on AI agents, automation, SEO, web development, cloud, data, security, and software for growing businesses.",
     h1: "Journal",
     excerpt: "Practical writing on software, search, and systems.",
     changefreq: "weekly",
