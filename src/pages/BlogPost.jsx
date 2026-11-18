@@ -97,16 +97,28 @@ export function BlogPost() {
             className="article-frame mx-auto mt-12 max-w-[720px] px-5 py-10 md:px-10"
           >
             <FadeInUp className="space-y-8 text-[17px] leading-8 text-[#E4E4E7]">
-              {post.sections.map((section, index) => (
-                <section key={section.body}>
-                  {section.heading ? (
-                    <h2 className="mb-4 text-2xl font-medium tracking-tight text-white">
-                      {section.heading}
-                    </h2>
-                  ) : null}
-                  <p className={index === 0 ? "article-lead" : undefined}>{section.body}</p>
-                </section>
-              ))}
+              {post.sections.map((section, index) => {
+                const paras = section.paragraphs || (section.body ? [section.body] : []);
+                return (
+                  <section key={section.heading || paras[0]?.slice(0, 48) || index}>
+                    {section.heading ? (
+                      <h2 className="mb-4 text-2xl font-medium tracking-tight text-white">
+                        {section.heading}
+                      </h2>
+                    ) : null}
+                    <div className="space-y-4">
+                      {paras.map((para, paraIndex) => (
+                        <p
+                          key={para.slice(0, 48)}
+                          className={index === 0 && paraIndex === 0 ? "article-lead" : undefined}
+                        >
+                          {para}
+                        </p>
+                      ))}
+                    </div>
+                  </section>
+                );
+              })}
             </FadeInUp>
           </div>
 

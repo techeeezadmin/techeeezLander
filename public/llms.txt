@@ -24,6 +24,10 @@ Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumb
 - [Cybersecurity](https://techeeez.com/services/cybersecurity)
 - [System Integration](https://techeeez.com/services/system-integration)
 
+## Journal
+
+- [AI Agents vs Chatbots: What Businesses Should Build First](https://techeeez.com/blog/ai-agents-vs-chatbots)
+
 ## Optional
 
 - [About](https://techeeez.com/about)
