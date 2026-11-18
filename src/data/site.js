@@ -4,6 +4,7 @@ export const siteConfig = {
   description:
     "Tech Eeez engineers websites, AI, and software systems — and helps businesses in Mumbai get found on Google and discovered in AI-powered search.",
   url: "https://techeeez.com",
+  gtmId: "GTM-TD3VHTLR",
   email: "support@techeeez.com",
   phone: "+91 9619118917",
   whatsapp: "https://wa.me/919619118917",

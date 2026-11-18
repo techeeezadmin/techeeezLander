@@ -53,7 +53,7 @@ function applyHead(html, route, extra = {}) {
     );
   }
 
-  if (!next.includes("<noscript>")) {
+  if (!next.includes("<noscript><main>")) {
     next = next.replace('<div id="root"></div>', `<div id="root"></div>\n    ${noscript}`);
   }
 
