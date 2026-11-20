@@ -15,13 +15,16 @@ const staticPages = [
     excerpt: siteConfig.description,
     changefreq: "weekly",
     priority: "1.0",
-    jsonLd: organizationJsonLd(),
+    jsonLd: [
+      organizationJsonLd(),
+      ...siteConfig.people.map((person) => personJsonLd(person)),
+    ],
   },
   {
     path: "/about",
     title: "About Tech Eeez | Software & Technology Solutions Company",
     description:
-      "Tech Eeez is an international technology agency working with businesses in the UK, UAE, and India on AI agents, automation, and digital products.",
+      "Meet the Tech Eeez team — an international technology agency building AI agents, automation, and digital products for the UK, UAE, and India.",
     h1: "Engineering built around business goals",
     excerpt:
       "An international agency for AI, software, and digital delivery. UK, UAE, and India.",

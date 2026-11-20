@@ -15,12 +15,32 @@ export const siteConfig = {
   },
   people: [
     {
+      slug: "aman-satija",
+      name: "Aman Satija",
+      role: "Founder and Senior AI Engineer",
+      image: "/team/aman-satija.jpg",
+      href: "https://www.linkedin.com/in/aman-satija/",
+      founder: true,
+    },
+    {
+      slug: "neeraj-shukla",
       name: "Neeraj Shukla",
+      role: "Senior AI Engineer",
+      image: "/team/neeraj-shukla.jpg",
       href: "https://www.linkedin.com/in/neeraj-shukla-35429911a/",
     },
     {
-      name: "Aman Satija",
-      href: "https://www.linkedin.com/in/aman-satija/",
+      slug: "rahul-pandey",
+      name: "Rahul Pandey",
+      role: "Senior Full Stack Developer",
+      image: "/team/rahul-pandey.jpg",
+      href: "https://www.linkedin.com/in/rahul-pandey-577a3b248/",
+    },
+    {
+      slug: "saurabh-singh",
+      name: "Saurabh Singh",
+      role: "Full Stack Developer",
+      image: "/team/saurabh-singh.jpg",
     },
   ],
   stats: [
