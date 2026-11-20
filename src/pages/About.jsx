@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../components/Breadcrumbs";
 import { FadeInUp } from "../components/FadeInUp";
 import { CountUp } from "../components/CountUp";
 import { Process } from "../components/Process";
+import { Team } from "../components/Team";
 import { Seo, organizationJsonLd, breadcrumbJsonLd, personJsonLd } from "../components/Seo";
 import { siteConfig } from "../data/site";
 import { getServicePath, services } from "../data/services";
@@ -12,7 +13,7 @@ export function About() {
     <>
       <Seo
         title="About Tech Eeez | Software & Technology Solutions Company"
-        description="Tech Eeez is an international technology agency working with businesses in the UK, UAE, and India on AI agents, automation, and digital products."
+        description="Meet the Tech Eeez team — an international technology agency building AI agents, automation, and digital products for the UK, UAE, and India."
         path="/about"
         jsonLd={[
           organizationJsonLd(),
@@ -52,28 +53,9 @@ export function About() {
             ))}
           </div>
 
-          <FadeInUp className="mt-16 border-t border-white/10 pt-10">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-[#A1A1AA]">
-              Team
-            </p>
-            <ul className="mt-6 grid gap-6 sm:grid-cols-2">
-              {siteConfig.people.map((person) => (
-                <li key={person.href}>
-                  <p className="text-2xl font-medium tracking-tight">{person.name}</p>
-                  <a
-                    href={person.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-cursor="link"
-                    className="mt-2 inline-flex text-sm text-[#D4D4D8] hover:text-white"
-                  >
-                    LinkedIn
-                    <span className="btn-arrow">→</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </FadeInUp>
+          <div className="mt-8 border-t border-white/10">
+            <Team />
+          </div>
 
           <div className="mt-8">
             <Process />

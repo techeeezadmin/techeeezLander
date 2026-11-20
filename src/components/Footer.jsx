@@ -130,18 +130,22 @@ export function Footer() {
       <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-[#A1A1AA] md:flex-row">
         <span>© 2026 {siteConfig.name}. All rights reserved.</span>
         <div className="flex flex-wrap justify-center gap-5">
-          {siteConfig.people.map((person) => (
-            <a
-              key={person.href}
-              href={person.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor="link"
-              className="hover:text-white"
-            >
-              {person.name}
-            </a>
-          ))}
+          {siteConfig.people.map((person) =>
+            person.href ? (
+              <a
+                key={person.slug}
+                href={person.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="link"
+                className="hover:text-white"
+              >
+                {person.name}
+              </a>
+            ) : (
+              <span key={person.slug}>{person.name}</span>
+            ),
+          )}
           {siteConfig.social.map((item) => (
             <a
               key={item.label}

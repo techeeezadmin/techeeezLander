@@ -41,6 +41,16 @@ export function organizationJsonLd() {
     .filter((href) => href && !isPlaceholderSocial(href));
   if (sameAs.length) entity.sameAs = sameAs;
 
+  const founder = (siteConfig.people || []).find((person) => person.founder);
+  if (founder) {
+    entity.founder = { "@id": `${siteConfig.url}/#${founder.slug}` };
+  }
+  if (siteConfig.people?.length) {
+    entity.employee = siteConfig.people.map((person) => ({
+      "@id": `${siteConfig.url}/#${person.slug}`,
+    }));
+  }
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -123,12 +133,18 @@ export function faqJsonLd(faq) {
 }
 
 export function personJsonLd(person) {
-  return {
+  const entity = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${siteConfig.url}/#${person.slug}`,
     name: person.name,
-    url: person.href,
-    sameAs: [person.href],
     worksFor: { "@id": `${siteConfig.url}/#organization` },
   };
+  if (person.role) entity.jobTitle = person.role;
+  if (person.image) entity.image = absoluteUrl(person.image);
+  if (person.href) {
+    entity.url = person.href;
+    entity.sameAs = [person.href];
+  }
+  return entity;
 }
