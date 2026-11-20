@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Tech Eeez",
   shortName: "TECHEEEZ",
   description:
-    "Tech Eeez engineers websites, AI, and software systems — and helps businesses in Mumbai get found on Google and discovered in AI-powered search.",
+    "Tech Eeez is an international AI and software agency. We build agents, automation, and digital products for businesses in the UK, UAE, and India.",
   url: "https://techeeez.com",
   gtmId: "GTM-TD3VHTLR",
   email: "support@techeeez.com",
