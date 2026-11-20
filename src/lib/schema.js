@@ -20,7 +20,12 @@ export function organizationJsonLd() {
     email: siteConfig.email,
     telephone: siteConfig.phone,
     description: siteConfig.description,
-    areaServed: ["IN", "Mumbai"],
+    areaServed: [
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: "Mumbai" },
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: `${siteConfig.address.line1} ${siteConfig.address.line2}`.trim(),
@@ -84,7 +89,11 @@ export function serviceJsonLd(service) {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    areaServed: "IN",
+    areaServed: [
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "United Arab Emirates" },
+      { "@type": "Country", name: "India" },
+    ],
     url: absoluteUrl(path),
   };
 }

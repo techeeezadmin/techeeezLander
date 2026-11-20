@@ -42,7 +42,7 @@ export function Contact() {
     <>
       <Seo
         title="Contact Tech Eeez | Build Your Next Digital Product"
-        description="Talk to Tech Eeez in Mumbai about websites, SEO, AI, or software projects. Call or WhatsApp +91 9619118917."
+        description="Talk to Tech Eeez about AI agents, automation, or software for teams in the UK, UAE, and India. Call or WhatsApp +91 9619118917."
         path="/contact"
         jsonLd={[
           organizationJsonLd(),
@@ -64,7 +64,7 @@ export function Contact() {
               <span className="font-serif italic font-normal">next.</span>
             </h1>
             <p className="mt-6 max-w-md text-[16px] leading-7 text-[#D4D4D8]">
-              Have a project in mind? Need a technology partner in Mumbai? Talk to Tech Eeez
+              Have a project in the UK, UAE, or India? Talk to Tech Eeez in Mumbai
               by email, phone, or WhatsApp.
             </p>
             <div className="mt-8">

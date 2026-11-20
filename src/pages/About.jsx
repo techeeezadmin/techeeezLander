@@ -12,7 +12,7 @@ export function About() {
     <>
       <Seo
         title="About Tech Eeez | Software & Technology Solutions Company"
-        description="Learn how Tech Eeez delivers software, websites, SEO, and AI search visibility for business growth across web, mobile, cloud, data, security, and integration."
+        description="Tech Eeez is a Mumbai software studio working with businesses in the UK, UAE, and India on AI agents, automation, and digital products."
         path="/about"
         jsonLd={[
           organizationJsonLd(),
@@ -35,10 +35,10 @@ export function About() {
               <span className="font-serif italic font-normal">goals.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-[16px] leading-7 text-[#D4D4D8]">
-              Tech Eeez is a software solutions company in Mumbai focused on
-              innovation and business growth. We combine modern engineering with
-              practical delivery across AI, web, mobile, cloud, data, security, and
-              integration.
+              Tech Eeez is a software studio in Mumbai. We build AI agents,
+              automation, and digital products for companies in the UK, UAE, and
+              India. The office is in Malad West. Delivery is remote. We do not
+              list UK or Dubai offices we do not have.
             </p>
           </FadeInUp>
 

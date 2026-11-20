@@ -8,10 +8,10 @@ const defaultImage = `${siteConfig.url}/og.svg`;
 const staticPages = [
   {
     path: "/",
-    title: "Tech Eeez | AI, Software & Digital Solutions Company in Mumbai",
+    title: "Tech Eeez | AI Agents & Software for UK, UAE & India",
     description:
-      "Tech Eeez builds websites, AI, and software systems — and helps businesses get found on Google and discovered in AI-powered search.",
-    h1: "Tech Eeez — AI, software, and digital solutions in Mumbai",
+      "Mumbai studio building AI agents, automation, and software for businesses in the UK, UAE, and India.",
+    h1: "We build the systems that make business move.",
     excerpt: siteConfig.description,
     changefreq: "weekly",
     priority: "1.0",
@@ -21,10 +21,10 @@ const staticPages = [
     path: "/about",
     title: "About Tech Eeez | Software & Technology Solutions Company",
     description:
-      "Learn how Tech Eeez delivers software, websites, SEO, and AI search visibility for business growth across web, mobile, cloud, data, security, and integration.",
+      "Tech Eeez is a Mumbai software studio working with businesses in the UK, UAE, and India on AI agents, automation, and digital products.",
     h1: "Engineering built around business goals",
     excerpt:
-      "Tech Eeez is a software solutions company in Mumbai focused on innovation and business growth.",
+      "Mumbai office. Remote delivery for companies in the UK, UAE, and India.",
     changefreq: "weekly",
     priority: "0.8",
     jsonLd: [
@@ -77,7 +77,7 @@ const staticPages = [
   },
   {
     path: "/blog",
-    title: "Tech Eeez Blog | Web, Cloud, AI & Software Insights from Mumbai",
+    title: "Tech Eeez Blog | AI Agents, Software & SEO",
     description:
       "Read practical articles from Tech Eeez on AI agents, automation, SEO, web development, cloud, data, security, and software for growing businesses.",
     h1: "Journal",
@@ -89,7 +89,7 @@ const staticPages = [
     path: "/contact",
     title: "Contact Tech Eeez | Build Your Next Digital Product",
     description:
-      "Talk to Tech Eeez in Mumbai about websites, SEO, AI, or software projects. Call or WhatsApp +91 9619118917.",
+      "Talk to Tech Eeez about AI agents, automation, or software for teams in the UK, UAE, and India. Call or WhatsApp +91 9619118917.",
     h1: "Start a project",
     excerpt: `Email ${siteConfig.email}, call ${siteConfig.phone}, or WhatsApp ${siteConfig.phone}.`,
     changefreq: "monthly",

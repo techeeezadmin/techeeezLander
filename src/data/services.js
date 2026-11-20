@@ -54,9 +54,9 @@ export const services = [
     particleShape: "atom",
     family: "ai",
     showcase: false,
-    seoTitle: "AI Agent Development Company | Tech Eeez",
+    seoTitle: "AI Agent Development for UK, UAE & India | Tech Eeez",
     seoDescription:
-      "Custom AI agent development from Tech Eeez in Mumbai — agents that use your data and tools to complete business tasks, with human oversight.",
+      "Custom AI agent development from Tech Eeez — agents that use your tools and data, with human approval. Built in Mumbai for teams in the UK, UAE, and India.",
     capabilities: [
       "Custom agents connected to CRM, email, docs, and internal APIs",
       "Multi-step workflows with tool use and human approval",
@@ -82,6 +82,11 @@ export const services = [
         question: "Do you build multi-agent systems?",
         answer:
           "Yes, when the work splits cleanly — for example one agent that retrieves knowledge and another that drafts a reply. We start with a single agent unless the workflow truly needs more than one.",
+      },
+      {
+        question: "Do you work with companies in the UK and UAE?",
+        answer:
+          "Yes. The studio is in Mumbai. We deliver remotely for UK and UAE teams on overlapping hours, with WhatsApp and email as the default contact path. We do not operate a UK or Dubai office.",
       },
     ],
   },

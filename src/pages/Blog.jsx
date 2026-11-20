@@ -23,7 +23,7 @@ export function Blog() {
   return (
     <>
       <Seo
-        title="Tech Eeez Blog | Web, Cloud, AI & Software Insights from Mumbai"
+        title="Tech Eeez Blog | AI Agents, Software & SEO"
         description="Read practical articles from Tech Eeez on AI agents, automation, SEO, web development, cloud, data, security, and software for growing businesses."
         path="/blog"
         jsonLd={blogIndexJsonLd()}

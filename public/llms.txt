@@ -1,6 +1,6 @@
 # Tech Eeez
 
-> Tech Eeez is a software and digital solutions company in Mumbai. We build websites, AI products, and software systems, and we help businesses become easier to find in Google Search and AI-powered discovery.
+> Tech Eeez is a Mumbai software studio. We build AI agents, automation, and digital products for businesses in the UK, UAE, and India. The office is in Malad West, Mumbai. We do not operate a UK or Dubai office.
 
 Site: https://techeeez.com
 Contact: support@techeeez.com
@@ -26,6 +26,7 @@ Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumb
 
 ## Journal
 
+- [AI Agent Development for UK Businesses](https://techeeez.com/blog/ai-agent-development-uk-businesses)
 - [AI Agents vs Chatbots: What Businesses Should Build First](https://techeeez.com/blog/ai-agents-vs-chatbots)
 
 ## Optional

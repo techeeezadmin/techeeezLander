@@ -18,9 +18,9 @@ export function AboutPreview() {
         </h2>
         <FadeInUp>
           <p className="mt-8 max-w-2xl text-[16px] leading-7 text-[#D4D4D8]">
-            Tech Eeez delivers AI, web, mobile, cloud, analytics, cybersecurity and
-            system integration. The focus stays on business growth, practical
-            outcomes and scalable execution.
+            Tech Eeez delivers AI agents, automation, web, mobile, cloud, and
+            integration from Mumbai. We work with companies in the UK, UAE, and
+            India — practical delivery, no invented offices.
           </p>
         </FadeInUp>
 
