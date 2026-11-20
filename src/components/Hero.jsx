@@ -86,9 +86,8 @@ export function Hero() {
 
         <FadeInUp delay={200}>
           <p className="mx-auto mt-7 max-w-xl text-[16px] leading-7 text-[#D4D4D8]">
-            A Mumbai studio building AI agents, automation, and software for teams
-            in the UK, UAE, and India. One office. Remote delivery. WhatsApp the same
-            day.
+            Tech Eeez is an international AI and software agency. We build agents,
+            automation, and products for teams in the UK, UAE, and India.
           </p>
         </FadeInUp>
 

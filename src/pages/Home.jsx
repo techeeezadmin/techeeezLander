@@ -15,7 +15,7 @@ export function Home() {
     <>
       <Seo
         title="Tech Eeez | AI Agents & Software for UK, UAE & India"
-        description="Mumbai studio building AI agents, automation, and software for businesses in the UK, UAE, and India. WhatsApp +91 9619118917."
+        description="Tech Eeez is an international AI and software agency. We build agents, automation, and products for businesses in the UK, UAE, and India. WhatsApp +91 9619118917."
         path="/"
         jsonLd={organizationJsonLd()}
       />

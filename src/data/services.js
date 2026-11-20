@@ -56,7 +56,7 @@ export const services = [
     showcase: false,
     seoTitle: "AI Agent Development for UK, UAE & India | Tech Eeez",
     seoDescription:
-      "Custom AI agent development from Tech Eeez — agents that use your tools and data, with human approval. Built in Mumbai for teams in the UK, UAE, and India.",
+      "Custom AI agent development from Tech Eeez, an international agency building agents that use your tools and data, with human approval, for teams in the UK, UAE, and India.",
     capabilities: [
       "Custom agents connected to CRM, email, docs, and internal APIs",
       "Multi-step workflows with tool use and human approval",
@@ -86,7 +86,7 @@ export const services = [
       {
         question: "Do you work with companies in the UK and UAE?",
         answer:
-          "Yes. The studio is in Mumbai. We deliver remotely for UK and UAE teams on overlapping hours, with WhatsApp and email as the default contact path. We do not operate a UK or Dubai office.",
+          "Yes. Tech Eeez is an international agency. We work with UK and UAE teams on overlapping hours, with WhatsApp and email as the default contact path. Our registered office is in Mumbai. We do not operate a UK or Dubai office.",
       },
     ],
   },

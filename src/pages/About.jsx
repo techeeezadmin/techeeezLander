@@ -12,7 +12,7 @@ export function About() {
     <>
       <Seo
         title="About Tech Eeez | Software & Technology Solutions Company"
-        description="Tech Eeez is a Mumbai software studio working with businesses in the UK, UAE, and India on AI agents, automation, and digital products."
+        description="Tech Eeez is an international technology agency working with businesses in the UK, UAE, and India on AI agents, automation, and digital products."
         path="/about"
         jsonLd={[
           organizationJsonLd(),
@@ -35,10 +35,9 @@ export function About() {
               <span className="font-serif italic font-normal">goals.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-[16px] leading-7 text-[#D4D4D8]">
-              Tech Eeez is a software studio in Mumbai. We build AI agents,
+              Tech Eeez is an international technology agency. We build AI agents,
               automation, and digital products for companies in the UK, UAE, and
-              India. The office is in Malad West. Delivery is remote. We do not
-              list UK or Dubai offices we do not have.
+              India.
             </p>
           </FadeInUp>
 

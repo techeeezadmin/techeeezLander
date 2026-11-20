@@ -10,7 +10,7 @@ const staticPages = [
     path: "/",
     title: "Tech Eeez | AI Agents & Software for UK, UAE & India",
     description:
-      "Mumbai studio building AI agents, automation, and software for businesses in the UK, UAE, and India.",
+      "Tech Eeez is an international AI and software agency. We build agents, automation, and products for businesses in the UK, UAE, and India.",
     h1: "We build the systems that make business move.",
     excerpt: siteConfig.description,
     changefreq: "weekly",
@@ -21,10 +21,10 @@ const staticPages = [
     path: "/about",
     title: "About Tech Eeez | Software & Technology Solutions Company",
     description:
-      "Tech Eeez is a Mumbai software studio working with businesses in the UK, UAE, and India on AI agents, automation, and digital products.",
+      "Tech Eeez is an international technology agency working with businesses in the UK, UAE, and India on AI agents, automation, and digital products.",
     h1: "Engineering built around business goals",
     excerpt:
-      "Mumbai office. Remote delivery for companies in the UK, UAE, and India.",
+      "An international agency for AI, software, and digital delivery. UK, UAE, and India.",
     changefreq: "weekly",
     priority: "0.8",
     jsonLd: [
@@ -89,7 +89,7 @@ const staticPages = [
     path: "/contact",
     title: "Contact Tech Eeez | Build Your Next Digital Product",
     description:
-      "Talk to Tech Eeez about AI agents, automation, or software for teams in the UK, UAE, and India. Call or WhatsApp +91 9619118917.",
+      "Talk to Tech Eeez, an international AI and software agency, about agents, automation, or software for teams in the UK, UAE, and India. Call or WhatsApp +91 9619118917.",
     h1: "Start a project",
     excerpt: `Email ${siteConfig.email}, call ${siteConfig.phone}, or WhatsApp ${siteConfig.phone}.`,
     changefreq: "monthly",

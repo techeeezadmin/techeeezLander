@@ -16,7 +16,7 @@ export const blogPosts = [
     author: "Tech Eeez",
     seoTitle: "AI Agent Development for UK Businesses | Tech Eeez",
     seoDescription:
-      "How UK companies should brief AI agent development: one workflow, tools, human approval, and a Mumbai studio that delivers remotely. No invented London office.",
+      "How UK companies should brief AI agent development: one workflow, tools, human approval, and an international agency that delivers remotely. No invented London office.",
     relatedService: "ai-agents",
     image: cover("photo-1521737604893-d14cc237f11d"),
     imageAlt: "Team collaborating around laptops in a bright office",
@@ -25,7 +25,7 @@ export const blogPosts = [
         heading: null,
         paragraphs: [
           "Search for AI agent development in the UK and you will see the same pattern: local-looking pages, a handful of case studies, and a promise that an agent will run the business. Most of that copy is a chatbot with extra adjectives. If you are a UK operator trying to cut copy-paste work, you need a tighter brief than that.",
-          "Tech Eeez is a Mumbai studio. We build AI agents, automation, and software for companies in the United Kingdom, the UAE, and India. We do not have a UK registered office, and we will not invent one for search. Remote delivery on overlapping hours is the product. This article is how to use that honestly.",
+          "Tech Eeez is an international AI and software agency. We build agents, automation, and products for companies in the United Kingdom, the UAE, and India. We do not list a UK registered office we do not have. Remote delivery on overlapping hours is the product. This article is how to use that honestly.",
         ],
       },
       {
@@ -43,7 +43,7 @@ export const blogPosts = [
         ],
       },
       {
-        heading: "Why a Mumbai studio can be the right UK vendor",
+        heading: "Why an international agency can be the right UK vendor",
         paragraphs: [
           "UK delivery for this work is mostly English-language product, APIs, and process design. Time zones overlap in the morning in London and the afternoon in Mumbai. WhatsApp and email are enough for daily contact. You do not need a Soho desk for an agent that talks to HubSpot.",
           "What you do need is a named owner on your side, access to a staging system, and a rule for irreversible actions. We keep a person in the loop for anything that changes records, sends mail outside the company, or moves money. That is slower than a demo. It is how UK operations teams actually adopt the tool.",
@@ -101,7 +101,7 @@ export const blogPosts = [
         paragraphs: [
           "Can you work on UK hours? For workshops and go-lives, yes, on overlapping mornings. Async updates sit on WhatsApp and email. Overnight UK coverage is not a 24-hour NOC we pretend to run.",
           "Will our data train a public model? Not as part of a standard build. We use the stack agreed in the proposal. Your documents stay yours. If retrieval is weak, the system should refuse instead of filling the gap.",
-          "Do you only work with Indian companies? No. The studio is in Mumbai. The work is for whoever owns the workflow, including UK and UAE teams.",
+          "Do you only work with Indian companies? No. Tech Eeez is an international agency. The work is for whoever owns the workflow, including UK and UAE teams.",
         ],
       },
       {
@@ -198,7 +198,7 @@ export const blogPosts = [
         heading: "What this is not",
         paragraphs: [
           "It is not a guarantee that an agent will replace a team. It is not a promise of a ranking, an AI citation, or a specific cost saving. Those depend on your volume, your data quality, and how tightly the workflow is defined.",
-          "It is also not the same as the generic search phrase AI agents, which is a broad head term. The useful queries are closer to AI agent development, AI automation for a named process, and the systems you already run. Tech Eeez is a Mumbai studio working with businesses in India, the UK, and the UAE. We do not invent extra offices, and we do not sell a chatbot as an agent.",
+          "It is also not the same as the generic search phrase AI agents, which is a broad head term. The useful queries are closer to AI agent development, AI automation for a named process, and the systems you already run. Tech Eeez is an international agency working with businesses in the UK, the UAE, and India. We do not invent extra offices, and we do not sell a chatbot as an agent.",
         ],
       },
       {
