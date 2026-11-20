@@ -492,12 +492,19 @@ button:hover .btn-arrow {
 }
 
 .mobile-menu {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.55s var(--ease-out-quart);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition:
+    opacity 0.28s var(--ease-out-quart),
+    transform 0.28s var(--ease-out-quart),
+    visibility 0.28s;
 }
 
 .mobile-menu.is-open {
-  clip-path: inset(0 0 0 0);
+  visibility: visible;
+  opacity: 1;
+  transform: none;
 }
 
 .reveal-line {
