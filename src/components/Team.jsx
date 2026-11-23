@@ -18,7 +18,7 @@ export function Team({ compact = false }) {
           </h2>
         </FadeInUp>
 
-        <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {siteConfig.people.map((person) => (
             <li key={person.slug}>
               <article>

@@ -95,7 +95,7 @@ export const blogPosts = [
         heading: "Local agencies, free zones, and trust",
         paragraphs: [
           "A Dubai agency with a Marina office can be the right buy if you need on-site workshops every week. It is the wrong buy if the work is an API, a prompt, an evaluation set, and a watched production lane. Compare the workflow, the logging, and who owns the code — not the free-zone licence on the invoice.",
-          "Tech Eeez lists the people on the About page: Aman Satija, Neeraj Shukla, Rahul Pandey, and Saurabh Singh. LinkedIn is on the first three. The Mumbai address is the one on this website. Contact is +91 9619118917, WhatsApp on the same number, and support@techeeez.com. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UAE entity on a landing page.",
+          "Tech Eeez lists the people on the About page: Aman Satija, Neeraj Shukla, Rahul Pandey, Saurabh Singh, and Karm. The Mumbai address is the one on this website. Contact is +91 9619118917, WhatsApp on the same number, and support@techeeez.com. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UAE entity on a landing page.",
         ],
       },
       {
@@ -207,7 +207,7 @@ export const blogPosts = [
         paragraphs: [
           "UK agencies will often lead with a London address and a retainer. That can be the right buy if you need on-site workshops every week. It is the wrong buy if the work is an API, a prompt, an evaluation set, and a watched production lane. Compare the workflow, the logging, and who owns the code — not the postcode on the invoice.",
           "Indian vendors will sometimes lead with headcount. That is also the wrong frame. You want a small team that can explain a failed run, not a bench that disappears after the demo. Ask who will be on the WhatsApp thread in week six. If the answer is a rotating account manager, keep looking.",
-          "Tech Eeez will show you the people on the About page. Neeraj Shukla and Aman Satija are listed with LinkedIn. The Mumbai address is the one on this website. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UK entity on a landing page.",
+          "Tech Eeez will show you the people on the About page. The Mumbai address is the one on this website. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UK entity on a landing page.",
         ],
       },
       {
