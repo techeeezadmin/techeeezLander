@@ -33,6 +33,7 @@ Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumb
 
 ## Journal
 
+- [AI Agent Development for UAE and Dubai Businesses](https://techeeez.com/blog/ai-agent-development-uae-dubai-businesses)
 - [AI Agent Development for UK Businesses](https://techeeez.com/blog/ai-agent-development-uk-businesses)
 - [AI Agents vs Chatbots: What Businesses Should Build First](https://techeeez.com/blog/ai-agents-vs-chatbots)
 
