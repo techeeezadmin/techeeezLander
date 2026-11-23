@@ -25,7 +25,7 @@ export const siteConfig = {
     {
       slug: "neeraj-shukla",
       name: "Neeraj Shukla",
-      role: "Senior AI Engineer",
+      role: "Director",
       image: "/team/neeraj-shukla.jpg",
       href: "https://www.linkedin.com/in/neeraj-shukla-35429911a/",
     },
@@ -41,6 +41,13 @@ export const siteConfig = {
       name: "Saurabh Singh",
       role: "Full Stack Developer",
       image: "/team/saurabh-singh.jpg",
+      href: "https://www.linkedin.com/in/saurabh-singh-59b323241/",
+    },
+    {
+      slug: "karm",
+      name: "Karm",
+      role: "Software Developer",
+      image: "/team/karm.jpg",
     },
   ],
   stats: [
