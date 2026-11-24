@@ -44,10 +44,10 @@ export const siteConfig = {
       href: "https://www.linkedin.com/in/saurabh-singh-59b323241/",
     },
     {
-      slug: "karm",
-      name: "Karm",
+      slug: "karma",
+      name: "Karma",
       role: "Software Developer",
-      image: "/team/karm.jpg",
+      image: "/team/karma.jpg",
     },
   ],
   stats: [

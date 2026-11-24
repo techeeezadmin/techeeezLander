@@ -14,7 +14,7 @@ Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumb
 - Neeraj Shukla — Director — https://www.linkedin.com/in/neeraj-shukla-35429911a/
 - Rahul Pandey — Senior Full Stack Developer — https://www.linkedin.com/in/rahul-pandey-577a3b248/
 - Saurabh Singh — Full Stack Developer — https://www.linkedin.com/in/saurabh-singh-59b323241/
-- Karm — Software Developer
+- Karma — Software Developer
 
 ## Services
 
@@ -34,6 +34,7 @@ Location: Shop No 4017, 2nd Floor Eaze Zone Mall, Sunder Nagar, Malad West, Mumb
 
 ## Journal
 
+- [AI Agent Development for Indian Businesses](https://techeeez.com/blog/ai-agent-development-india-mumbai-businesses)
 - [AI Agent Development for UAE and Dubai Businesses](https://techeeez.com/blog/ai-agent-development-uae-dubai-businesses)
 - [AI Agent Development for UK Businesses](https://techeeez.com/blog/ai-agent-development-uk-businesses)
 - [AI Agents vs Chatbots: What Businesses Should Build First](https://techeeez.com/blog/ai-agents-vs-chatbots)
