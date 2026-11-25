@@ -3,6 +3,122 @@ const cover = (id) =>
 
 export const blogPosts = [
   {
+    slug: "ai-agent-development-india-mumbai-businesses",
+    title: "AI Agent Development for Indian Businesses: A Practical Brief from the Mumbai Office",
+    excerpt:
+      "Indian teams do not need another Bengaluru bench or a website chatbot sticker. They need one WhatsApp workflow, a named approver, and the people listed on the About page.",
+    category: "AI",
+    topic: "ai",
+    layout: "vs-choice",
+    kicker: "India",
+    overlay: "India agents",
+    publishedAt: "2026-11-24",
+    author: "Tech Eeez",
+    seoTitle: "AI Agent Development for India and Mumbai Businesses | Tech Eeez",
+    seoDescription:
+      "How Indian companies should brief AI agent development: WhatsApp queues, DPDP, GST billing from a Mumbai registered office. No invented Bengaluru or Delhi offices.",
+    relatedService: "ai-agents",
+    image: cover("photo-1529253355930-ddbe423a2ac7"),
+    imageAlt:
+      "Gateway of India in Mumbai, the city of Tech Eeez's registered office, used as an illustration, not a claim of a waterfront studio",
+    sections: [
+      {
+        heading: null,
+        paragraphs: [
+          "Search for AI agent development in India and the first page is a pile of website-chatbot demos, a 200-person slide, and a Gurugram address that may or may not be a desk. If you already run the business on WhatsApp, Tally, Zoho, and a shared Excel, that is not a brief. You need one job, one system of record, and a team that will still pick up in week six.",
+          "Tech Eeez is an international AI and software agency. We build agents, automation, and products for companies in India, the UK, and the UAE. The registered office is in Malad West, Mumbai. That is a real address you can visit. It is not a licence to invent a Bengaluru campus, a Pune delivery centre, or a Delhi sales floor. This article is the brief we want from an Indian buyer.",
+        ],
+      },
+      {
+        heading: "What Indian teams are usually trying to buy",
+        paragraphs: [
+          "The work sits on the phone. A dealer pings on WhatsApp after 8pm. A clinic wants yesterday's appointments turned into a CRM row before the next walk-in. A D2C inbox should draft a refund reply from the policy, not from a script the intern rewrote. A factory dispatcher should get a status the ERP already knows. Those jobs show up in search as AI agent development India, AI chatbot for business, WhatsApp automation, and customer support AI.",
+          "The head term AI agents is too broad to rank for and too vague to build. If the request is still “put ChatGPT on the website,” you are buying a chatbot. Say so. If the request is “read this WhatsApp number, look up the party in Zoho, draft the reply, wait for a human send,” you are buying an agent. Mixing the two in one RFP is how the project becomes a landing page and a disappointed founder.",
+        ],
+      },
+      {
+        heading: "WhatsApp is the front desk",
+        paragraphs: [
+          "In India the customer did not fill the form. They messaged the number on the flex banner, the Instagram bio, or the visiting card. Email is for PDFs and purchase orders. The CRM is the thing the sales lead updates on Sundays. An agent that only watches the website widget will miss the real queue.",
+          "Hinglish is normal. So is a voice note, a photo of a challan, a forwarding chain with four people, and a customer who changes the SKU halfway through. An auto-reply that says “Thank you for contacting us, one of our executives will connect shortly” is not development work. Connecting the thread to Zoho, HubSpot, Leadsquared, or a custom desk, with a log of every lookup, is. We keep a person in the loop for anything that leaves the company, changes a ledger, or collects money. Unattended UPI collection from an agent is how you get a chargeback, not a case study.",
+        ],
+      },
+      {
+        heading: "Chatbot, RAG, or agent",
+        paragraphs: [
+          "A chatbot answers from a script or a model. Retrieval-augmented generation grounds those answers in your rate list, return policy, and GST FAQ. An agent is given a job and may call tools: look up the party, draft a reply, open a ticket, stop when the source is weak. Indian teams often ask for an agent and need RAG plus a human send button first. That is the build that ships.",
+          "We wrote a longer comparison of agents and chatbots. Use that if the team is still arguing about the label. Use this page if the job is already a WhatsApp-to-system path. We also wrote a UK brief and a UAE brief for buyers who are not in India. Those pages are not this page with the city swapped. Time zone, data law, and the channel are different. Here the office and the working day are the same as yours.",
+        ],
+      },
+      {
+        heading: "The Mumbai office, and the offices we do not have",
+        paragraphs: [
+          "The registered office is Shop No 4017, 2nd Floor, Eaze Zone Mall, Sunder Nagar, Malad West, Mumbai 400064. Workshops can happen there. GST billing comes from an Indian entity at that address. Same IST as Bengaluru, Hyderabad, Pune, and Delhi. You do not need a 6.30am London call to ship a WhatsApp agent.",
+          "We will not list a Koramangala studio, a HITEC City floor, or a Cyber Hub meeting room we do not rent. Doorway pages that only change the city name are a short path to a penalty. The commercial URL is the AI agent development service page. This article supports it. If you need someone sitting in your office five days a week, hire that person. If you need an API, a prompt, an evaluation set, and a watched production lane, the people on the About page are the product.",
+        ],
+      },
+      {
+        heading: "DPDP, GST, and what we will not promise",
+        paragraphs: [
+          "The Digital Personal Data Protection Act, 2023 is a contract and architecture problem, not a badge on a homepage. If personal data must stay in India, say so before we pick a host or an index. Consent, purpose, access lists, and a data processing schedule belong in the proposal. We will not bolt residency on after a public demo. We are not your counsel. If you need a legal opinion, bring a lawyer to the same call.",
+          "We will not quote a rupee saving we have not measured on your volume. We will not claim a ranking, an AI citation, or a headcount cut. We will not invent a TRAI clearance for blast calling. Outbound voice sits under DND and consent rules; an AI voice agent still needs an honest opener that this is an assistant, a transcript, and a path to a person. Festival weeks will spike the queue. We plan for Diwali and wedding-season load as volume, not as a slogan.",
+        ],
+      },
+      {
+        heading: "A brief that survives an Indian founder call",
+        paragraphs: [
+          "Write one sentence for the job. List the systems: WhatsApp Business or a BSP such as WATI or Interakt, Zoho or HubSpot, Tally or the ERP, Razorpay or the payment desk, the shared drive. Name who approves send. Attach ten real threads, including the ugly ones: mixed Hindi and English, a dealer who sends a photo instead of a SKU, a duplicate lead from IndiaMART, a customer who forwards the chat to a family WhatsApp group.",
+          "If you cannot produce those, start with a knowledge-base chatbot, not an agent. Say whether the first workflow is WhatsApp, email, voice, or an internal copilot. Mixing all four in month one is how these projects stall in a pitch deck. Agree four weeks: discovery, a thin path in staging, evaluation on live examples, then a decision to watch it in production or stop. Stopping is a valid outcome. It is cheaper than a year of a bot the floor staff mute.",
+        ],
+      },
+      {
+        heading: "Tools and the boring integrations",
+        paragraphs: [
+          "Indian companies already run a stack that looks ordinary from the inside and messy from the outside: WhatsApp, Zoho, Tally, Excel, a payment gateway, sometimes SAP or a regional ERP. An agent that cannot call those APIs is a chatbot with a new name. The first technical question is which account we may use in staging, with least privilege, and how we log every call.",
+          "If Tally has no usable API for the job, we say so in week one. If the knowledge is a mix of WhatsApp forwards and a manager's notes, RAG will guess. Clean the source or start smaller. We would rather ship a narrow agent on one business number than a “platform” that never leaves a Notion page. Price still has to stand up. A small named team is the offer. A rented bench that vanishes after the demo is not.",
+        ],
+      },
+      {
+        heading: "How we measure a first month",
+        paragraphs: [
+          "Vanity metrics do not help an Indian operations lead. We track whether the workflow completed, whether a human had to edit the draft, and whether anything irreversible happened without approval. Time saved is a follow-up number once those three are stable.",
+          "If the agent drafts twenty replies a day and a person sends eighteen of them with light edits, that is a win. If it sends two and the rest are rewritten from scratch, we change the retrieval or we stop. We do not hide a weak run behind a Hindi demo recorded once for a reel.",
+        ],
+      },
+      {
+        heading: "What a first India workflow usually looks like",
+        paragraphs: [
+          "Week one maps the current human path on the actual channel, usually WhatsApp. Week two connects one or two tools with logging on and send off. Week three replays mixed-language threads, incomplete leads, and a festival-week burst if you have one on file. Week four is a go or no-go. If a rule-based automation without a model is enough, we build that and still call it automation, not an agent.",
+          "Clinics, D2C, trade, education, and field sales show up often because the volume is high and the systems already exist. We do not need a sector slogan. We need the ten threads. Named clients and the kind of work we have already shipped sit on the Work page. We will not pad this article with invented logos.",
+        ],
+      },
+      {
+        heading: "Local agencies, IT benches, and trust",
+        paragraphs: [
+          "A Mumbai or Bengaluru agency with a retainer and a room full of people can be the right buy if you need bodies on site every week. It is the wrong buy if the work is an API, a prompt, an evaluation set, and a watched production lane. Compare the workflow, the logging, and who owns the code — not the pin code on the invoice or the headcount in the deck.",
+          "Marketplace freelancers will often lead with an hourly rate. That can be fine for a one-off script. It is a weak way to buy something that touches customers and ledgers. Ask who will be on the WhatsApp thread in week six. If the answer is a rotating account manager, keep looking.",
+          "Tech Eeez lists the people on the About page: Aman Satija, Neeraj Shukla, Rahul Pandey, Saurabh Singh, and Karma. The Mumbai address is the one on this website. Contact is +91 9619118917, WhatsApp on the same number, and support@techeeez.com. If you want a 50-person factory, we are the wrong vendor. If you want the people who will actually build the first workflow, start there.",
+        ],
+      },
+      {
+        heading: "Questions Indian teams ask us",
+        paragraphs: [
+          "Can we visit? Yes. The registered office is in Malad West, Mumbai. Book it. We do not run drop-in sales floors in other cities.",
+          "Can you work only in English? No. Many first workflows are Hinglish on WhatsApp. We name the languages in the proposal, test on your real threads, and route anything uncertain to a person. We do not claim every scheduled language on day one.",
+          "Will our data train a public model? Not as part of a standard build. We use the stack agreed in the proposal. Your documents stay yours. If retrieval is weak, the system should refuse instead of filling the gap.",
+          "Are you only an export studio? No. Tech Eeez is an international agency. A large share of the work is for UK and UAE teams. The same people also build for Indian companies. The office in Mumbai is the registered office, not a claim that every project is local.",
+        ],
+      },
+      {
+        heading: "What to do next",
+        paragraphs: [
+          "If you have a workflow, start on the contact page or WhatsApp +91 9619118917. Read the AI agent development service page for scope, and the agents versus chatbots article if the team is still choosing a shape. Bring the ten threads. We will tell you if a chatbot is enough.",
+          "If you are not ready to build, the useful homework is still the same: one job, one system of record, one approver, and whether the first channel is WhatsApp. That document is worth more than another vendor reel filmed against a skyline.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agent-development-uae-dubai-businesses",
     title: "AI Agent Development for UAE and Dubai Businesses: A Practical Brief for Remote Delivery",
     excerpt:
@@ -46,7 +162,7 @@ export const blogPosts = [
         heading: "Chatbot, RAG, or agent",
         paragraphs: [
           "A chatbot answers. Retrieval-augmented generation grounds those answers in your rate cards, policies, and PDFs. An agent is given a job and may call tools: look up a unit, draft a reply, open a ticket, stop when the source is weak. UAE teams often ask for an Arabic-English agent and need RAG plus a human send button first. That is the build that ships.",
-          "We wrote a longer comparison of agents and chatbots. Use that if the team is still arguing about the label. Use this page if the job is already a WhatsApp-to-system path and you want a remote agency to build the first workflow. We also wrote a UK version of this brief. The UAE version is not a city swap. The queue, the hours, and the data rules are different.",
+          "We wrote a longer comparison of agents and chatbots. Use that if the team is still arguing about the label. Use this page if the job is already a WhatsApp-to-system path and you want a remote agency to build the first workflow. We also wrote a UK version of this brief, and an India brief for buyers who share the Mumbai office timezone. The UAE version is not a city swap. The queue, the hours, and the data rules are different.",
         ],
       },
       {
@@ -95,7 +211,7 @@ export const blogPosts = [
         heading: "Local agencies, free zones, and trust",
         paragraphs: [
           "A Dubai agency with a Marina office can be the right buy if you need on-site workshops every week. It is the wrong buy if the work is an API, a prompt, an evaluation set, and a watched production lane. Compare the workflow, the logging, and who owns the code — not the free-zone licence on the invoice.",
-          "Tech Eeez lists the people on the About page: Aman Satija, Neeraj Shukla, Rahul Pandey, Saurabh Singh, and Karm. The Mumbai address is the one on this website. Contact is +91 9619118917, WhatsApp on the same number, and support@techeeez.com. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UAE entity on a landing page.",
+          "Tech Eeez lists the people on the About page: Aman Satija, Neeraj Shukla, Rahul Pandey, Saurabh Singh, and Karma. The Mumbai address is the one on this website. Contact is +91 9619118917, WhatsApp on the same number, and support@techeeez.com. If that is not enough trust for your procurement bar, we would rather lose the deal than invent a UAE entity on a landing page.",
         ],
       },
       {
@@ -153,7 +269,7 @@ export const blogPosts = [
         heading: "Chatbot, RAG, or agent",
         paragraphs: [
           "A chatbot answers. Retrieval-augmented generation grounds those answers in your documents. An agent is given a job and is allowed to use tools: look up a record, draft a reply, open a ticket, stop when the source is weak. UK teams often ask for an agent and need RAG plus a human send button. That is not a lesser project. It is the one that ships.",
-          "We wrote a longer comparison of agents and chatbots. Use that if the team is still arguing about the label. Use this page if you already know you need tool use and you want a remote studio to build the first workflow.",
+          "We wrote a longer comparison of agents and chatbots. Use that if the team is still arguing about the label. Use this page if you already know you need tool use and you want a remote studio to build the first workflow. There is a UAE version and an India version of this brief. They are not city swaps.",
         ],
       },
       {
